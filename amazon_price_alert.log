@@ -1,0 +1,1597 @@
+2025-05-10 16:22:44,203 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:22:47,131 - INFO - Available!
+2025-05-10 16:22:47,134 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:22:47,135 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:22:49,631 - INFO - Available!
+2025-05-10 16:22:49,633 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:22:49,634 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:22:52,423 - INFO - Available!
+2025-05-10 16:22:52,425 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:22:52,426 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:22:54,994 - INFO - Available!
+2025-05-10 16:22:54,999 - ERROR - Error with price
+2025-05-10 16:22:54,999 - INFO - Retrying...
+2025-05-10 16:22:55,500 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:22:58,137 - INFO - Available!
+2025-05-10 16:22:58,141 - ERROR - Error with price
+2025-05-10 16:22:58,141 - INFO - Retrying...
+2025-05-10 16:22:58,642 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:23:01,476 - INFO - Available!
+2025-05-10 16:23:01,479 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:23:01,479 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:23:31,481 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:23:34,066 - INFO - Available!
+2025-05-10 16:23:34,069 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:23:34,069 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:23:36,508 - INFO - Available!
+2025-05-10 16:23:36,510 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:23:36,511 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:23:39,023 - INFO - Available!
+2025-05-10 16:23:39,026 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:23:39,027 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:23:41,461 - INFO - Available!
+2025-05-10 16:23:41,466 - ERROR - Error with price
+2025-05-10 16:23:41,466 - INFO - Retrying...
+2025-05-10 16:23:41,967 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:23:43,105 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:23:44,370 - INFO - Available!
+2025-05-10 16:23:44,376 - ERROR - Error with price
+2025-05-10 16:23:44,376 - INFO - Retrying...
+2025-05-10 16:23:44,877 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:23:45,758 - INFO - Available!
+2025-05-10 16:23:45,760 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:23:45,761 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:23:47,496 - INFO - Available!
+2025-05-10 16:23:47,499 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:23:47,499 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:23:48,173 - INFO - Available!
+2025-05-10 16:23:48,175 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:23:48,175 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:23:50,651 - INFO - Available!
+2025-05-10 16:23:50,653 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:23:50,653 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:23:53,157 - INFO - Available!
+2025-05-10 16:23:53,161 - ERROR - Error with price
+2025-05-10 16:23:53,161 - INFO - Retrying...
+2025-05-10 16:23:53,662 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:23:56,069 - INFO - Available!
+2025-05-10 16:23:56,074 - ERROR - Error with price
+2025-05-10 16:23:56,074 - INFO - Retrying...
+2025-05-10 16:23:56,575 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:24:07,515 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:24:12,176 - INFO - Available!
+2025-05-10 16:24:12,180 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:24:12,181 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:24:14,411 - INFO - Available!
+2025-05-10 16:24:14,413 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:24:14,413 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:24:16,951 - INFO - Available!
+2025-05-10 16:24:16,953 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:24:16,953 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:24:17,500 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:24:19,478 - INFO - Available!
+2025-05-10 16:24:19,483 - ERROR - Error with price
+2025-05-10 16:24:19,483 - INFO - Retrying...
+2025-05-10 16:24:19,984 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:24:20,171 - INFO - Available!
+2025-05-10 16:24:20,174 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:24:20,174 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:24:22,403 - INFO - Available!
+2025-05-10 16:24:22,408 - ERROR - Error with price
+2025-05-10 16:24:22,408 - INFO - Retrying...
+2025-05-10 16:24:22,585 - INFO - Available!
+2025-05-10 16:24:22,587 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:24:22,587 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:24:22,909 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:24:25,253 - INFO - Available!
+2025-05-10 16:24:25,255 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:24:25,256 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:24:25,549 - INFO - Available!
+2025-05-10 16:24:25,552 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:24:25,552 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:24:27,798 - INFO - Available!
+2025-05-10 16:24:27,803 - ERROR - Error with price
+2025-05-10 16:24:27,803 - INFO - Retrying...
+2025-05-10 16:24:28,304 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:24:30,812 - INFO - Available!
+2025-05-10 16:24:30,817 - ERROR - Error with price
+2025-05-10 16:24:30,817 - INFO - Retrying...
+2025-05-10 16:24:31,318 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:24:33,863 - INFO - Available!
+2025-05-10 16:24:33,866 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:24:33,866 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:24:53,151 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:24:55,553 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:24:55,801 - INFO - Available!
+2025-05-10 16:24:55,805 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:24:55,806 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:24:58,154 - INFO - Available!
+2025-05-10 16:24:58,156 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:24:58,157 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:24:58,204 - INFO - Available!
+2025-05-10 16:24:58,206 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:24:58,206 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:25:00,549 - INFO - Available!
+2025-05-10 16:25:00,551 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:25:00,552 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:25:00,818 - INFO - Available!
+2025-05-10 16:25:00,820 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:25:00,821 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:25:03,111 - INFO - Available!
+2025-05-10 16:25:03,113 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:25:03,114 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:25:03,293 - INFO - Available!
+2025-05-10 16:25:03,298 - ERROR - Error with price
+2025-05-10 16:25:03,298 - INFO - Retrying...
+2025-05-10 16:25:03,799 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:25:05,503 - INFO - Available!
+2025-05-10 16:25:05,507 - ERROR - Error with price
+2025-05-10 16:25:05,508 - INFO - Retrying...
+2025-05-10 16:25:06,008 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:25:06,259 - INFO - Available!
+2025-05-10 16:25:06,264 - ERROR - Error with price
+2025-05-10 16:25:06,264 - INFO - Retrying...
+2025-05-10 16:25:06,765 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:25:08,560 - INFO - Available!
+2025-05-10 16:25:08,565 - ERROR - Error with price
+2025-05-10 16:25:08,565 - INFO - Retrying...
+2025-05-10 16:25:09,066 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:25:09,498 - INFO - Available!
+2025-05-10 16:25:09,501 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:25:09,501 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:25:11,675 - INFO - Available!
+2025-05-10 16:25:11,678 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:25:11,678 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:25:39,503 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:25:41,679 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:25:42,159 - INFO - Available!
+2025-05-10 16:25:42,162 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:25:42,163 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:25:44,389 - INFO - Available!
+2025-05-10 16:25:44,392 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:25:44,393 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:25:44,561 - INFO - Available!
+2025-05-10 16:25:44,563 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:25:44,563 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:25:46,768 - INFO - Available!
+2025-05-10 16:25:46,770 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:25:46,771 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:25:47,234 - INFO - Available!
+2025-05-10 16:25:47,236 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:25:47,237 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:25:49,664 - INFO - Available!
+2025-05-10 16:25:49,666 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:25:49,667 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:25:50,335 - INFO - Available!
+2025-05-10 16:25:50,340 - ERROR - Error with price
+2025-05-10 16:25:50,340 - INFO - Retrying...
+2025-05-10 16:25:50,841 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:25:52,291 - INFO - Available!
+2025-05-10 16:25:52,296 - ERROR - Error with price
+2025-05-10 16:25:52,296 - INFO - Retrying...
+2025-05-10 16:25:52,797 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:25:53,317 - INFO - Available!
+2025-05-10 16:25:53,321 - ERROR - Error with price
+2025-05-10 16:25:53,321 - INFO - Retrying...
+2025-05-10 16:25:53,822 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:25:55,423 - INFO - Available!
+2025-05-10 16:25:55,427 - ERROR - Error with price
+2025-05-10 16:25:55,428 - INFO - Retrying...
+2025-05-10 16:25:55,940 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:25:56,573 - INFO - Available!
+2025-05-10 16:25:56,576 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:25:56,576 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:25:59,139 - INFO - Available!
+2025-05-10 16:25:59,142 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:25:59,142 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:26:26,578 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:26:29,143 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:26:29,287 - INFO - Available!
+2025-05-10 16:26:29,289 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:26:29,290 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:26:31,668 - INFO - Available!
+2025-05-10 16:26:31,670 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:26:31,670 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:26:31,792 - INFO - Available!
+2025-05-10 16:26:31,794 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:26:31,795 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:26:34,137 - INFO - Available!
+2025-05-10 16:26:34,139 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:26:34,139 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:26:34,413 - INFO - Available!
+2025-05-10 16:26:34,415 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:26:34,416 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:26:36,642 - INFO - Available!
+2025-05-10 16:26:36,644 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:26:36,644 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:26:36,814 - INFO - Available!
+2025-05-10 16:26:36,818 - ERROR - Error with price
+2025-05-10 16:26:36,819 - INFO - Retrying...
+2025-05-10 16:26:37,319 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:26:39,117 - INFO - Available!
+2025-05-10 16:26:39,122 - ERROR - Error with price
+2025-05-10 16:26:39,122 - INFO - Retrying...
+2025-05-10 16:26:39,623 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:26:39,720 - INFO - Available!
+2025-05-10 16:26:39,725 - ERROR - Error with price
+2025-05-10 16:26:39,725 - INFO - Retrying...
+2025-05-10 16:26:40,226 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:26:42,093 - INFO - Available!
+2025-05-10 16:26:42,098 - ERROR - Error with price
+2025-05-10 16:26:42,098 - INFO - Retrying...
+2025-05-10 16:26:42,599 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:26:42,948 - INFO - Available!
+2025-05-10 16:26:42,951 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:26:42,951 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:26:45,290 - INFO - Available!
+2025-05-10 16:26:45,293 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:26:45,293 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:27:12,952 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:27:15,294 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:27:15,690 - INFO - Available!
+2025-05-10 16:27:15,692 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:27:15,693 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:27:17,884 - INFO - Available!
+2025-05-10 16:27:17,887 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:27:17,887 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:27:18,058 - INFO - Available!
+2025-05-10 16:27:18,059 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:27:18,060 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:27:20,215 - INFO - Available!
+2025-05-10 16:27:20,217 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:27:20,217 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:27:20,592 - INFO - Available!
+2025-05-10 16:27:20,595 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:27:20,595 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:27:22,842 - INFO - Available!
+2025-05-10 16:27:22,844 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:27:22,845 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:27:23,158 - INFO - Available!
+2025-05-10 16:27:23,163 - ERROR - Error with price
+2025-05-10 16:27:23,163 - INFO - Retrying...
+2025-05-10 16:27:23,664 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:27:25,310 - INFO - Available!
+2025-05-10 16:27:25,315 - ERROR - Error with price
+2025-05-10 16:27:25,315 - INFO - Retrying...
+2025-05-10 16:27:25,816 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:27:26,069 - INFO - Available!
+2025-05-10 16:27:26,073 - ERROR - Error with price
+2025-05-10 16:27:26,073 - INFO - Retrying...
+2025-05-10 16:27:26,575 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:27:28,341 - INFO - Available!
+2025-05-10 16:27:28,345 - ERROR - Error with price
+2025-05-10 16:27:28,346 - INFO - Retrying...
+2025-05-10 16:27:28,846 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:27:29,317 - INFO - Available!
+2025-05-10 16:27:29,320 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:27:29,320 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:27:31,550 - INFO - Available!
+2025-05-10 16:27:31,552 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:27:31,552 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:27:59,322 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:28:01,554 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:28:02,066 - INFO - Available!
+2025-05-10 16:28:02,069 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:28:02,070 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:28:04,090 - INFO - Available!
+2025-05-10 16:28:04,093 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:28:04,093 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:28:04,443 - INFO - Available!
+2025-05-10 16:28:04,445 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:28:04,445 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:28:06,458 - INFO - Available!
+2025-05-10 16:28:06,460 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:28:06,461 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:28:07,125 - INFO - Available!
+2025-05-10 16:28:07,127 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:28:07,128 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:28:09,100 - INFO - Available!
+2025-05-10 16:28:09,102 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:28:09,103 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:28:09,659 - INFO - Available!
+2025-05-10 16:28:09,664 - ERROR - Error with price
+2025-05-10 16:28:09,664 - INFO - Retrying...
+2025-05-10 16:28:10,165 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:28:11,718 - INFO - Available!
+2025-05-10 16:28:11,723 - ERROR - Error with price
+2025-05-10 16:28:11,723 - INFO - Retrying...
+2025-05-10 16:28:12,224 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:28:12,610 - INFO - Available!
+2025-05-10 16:28:12,615 - ERROR - Error with price
+2025-05-10 16:28:12,615 - INFO - Retrying...
+2025-05-10 16:28:13,116 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:28:14,680 - INFO - Available!
+2025-05-10 16:28:14,684 - ERROR - Error with price
+2025-05-10 16:28:14,684 - INFO - Retrying...
+2025-05-10 16:28:15,186 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:28:15,719 - INFO - Available!
+2025-05-10 16:28:15,721 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:28:15,721 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:28:17,773 - INFO - Available!
+2025-05-10 16:28:17,776 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:28:17,776 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:28:45,722 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:28:47,778 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:28:48,364 - INFO - Available!
+2025-05-10 16:28:48,367 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:28:48,367 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:28:50,394 - INFO - Available!
+2025-05-10 16:28:50,397 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:28:50,398 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:28:50,716 - INFO - Available!
+2025-05-10 16:28:50,718 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:28:50,719 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:28:52,642 - INFO - Available!
+2025-05-10 16:28:52,644 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:28:52,644 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:28:53,276 - INFO - Available!
+2025-05-10 16:28:53,278 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:28:53,279 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:28:55,266 - INFO - Available!
+2025-05-10 16:28:55,268 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:28:55,269 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:28:55,804 - INFO - Available!
+2025-05-10 16:28:55,809 - ERROR - Error with price
+2025-05-10 16:28:55,809 - INFO - Retrying...
+2025-05-10 16:28:56,310 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:28:57,685 - INFO - Available!
+2025-05-10 16:28:57,690 - ERROR - Error with price
+2025-05-10 16:28:57,690 - INFO - Retrying...
+2025-05-10 16:28:58,190 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:28:58,744 - INFO - Available!
+2025-05-10 16:28:58,749 - ERROR - Error with price
+2025-05-10 16:28:58,749 - INFO - Retrying...
+2025-05-10 16:28:59,249 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:29:00,583 - INFO - Available!
+2025-05-10 16:29:00,587 - ERROR - Error with price
+2025-05-10 16:29:00,587 - INFO - Retrying...
+2025-05-10 16:29:01,089 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:29:02,032 - INFO - Available!
+2025-05-10 16:29:02,038 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:29:02,038 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:29:03,748 - INFO - Available!
+2025-05-10 16:29:03,751 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:29:03,751 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:29:32,039 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:29:33,753 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:29:34,691 - INFO - Available!
+2025-05-10 16:29:34,694 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:29:34,694 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:29:36,315 - INFO - Available!
+2025-05-10 16:29:36,318 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:29:36,319 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:29:37,022 - INFO - Available!
+2025-05-10 16:29:37,024 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:29:37,025 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:29:38,558 - INFO - Available!
+2025-05-10 16:29:38,560 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:29:38,560 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:29:39,720 - INFO - Available!
+2025-05-10 16:29:39,722 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:29:39,722 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:29:41,118 - INFO - Available!
+2025-05-10 16:29:41,120 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:29:41,120 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:29:42,218 - INFO - Available!
+2025-05-10 16:29:42,223 - ERROR - Error with price
+2025-05-10 16:29:42,223 - INFO - Retrying...
+2025-05-10 16:29:42,724 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:29:43,629 - INFO - Available!
+2025-05-10 16:29:43,634 - ERROR - Error with price
+2025-05-10 16:29:43,634 - INFO - Retrying...
+2025-05-10 16:29:44,136 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:29:45,221 - INFO - Available!
+2025-05-10 16:29:45,225 - ERROR - Error with price
+2025-05-10 16:29:45,225 - INFO - Retrying...
+2025-05-10 16:29:45,727 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:29:46,555 - INFO - Available!
+2025-05-10 16:29:46,559 - ERROR - Error with price
+2025-05-10 16:29:46,559 - INFO - Retrying...
+2025-05-10 16:29:47,060 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:29:48,428 - INFO - Available!
+2025-05-10 16:29:48,431 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:29:48,431 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:29:49,757 - INFO - Available!
+2025-05-10 16:29:49,760 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:29:49,760 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:30:18,432 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:30:19,761 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:30:21,182 - INFO - Available!
+2025-05-10 16:30:21,185 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:30:21,186 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:30:22,672 - INFO - Available!
+2025-05-10 16:30:22,675 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:30:22,675 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:30:24,130 - INFO - Available!
+2025-05-10 16:30:24,132 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:30:24,133 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:30:26,589 - INFO - Available!
+2025-05-10 16:30:26,591 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:30:26,592 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:30:28,552 - INFO - Available!
+2025-05-10 16:30:28,554 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:30:28,555 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:30:30,574 - INFO - Available!
+2025-05-10 16:30:30,576 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:30:30,577 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:30:32,649 - INFO - Available!
+2025-05-10 16:30:32,653 - ERROR - Error with price
+2025-05-10 16:30:32,653 - INFO - Retrying...
+2025-05-10 16:30:33,154 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:30:34,959 - INFO - Available!
+2025-05-10 16:30:34,963 - ERROR - Error with price
+2025-05-10 16:30:34,964 - INFO - Retrying...
+2025-05-10 16:30:35,464 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:30:37,299 - INFO - Available!
+2025-05-10 16:30:37,305 - ERROR - Error with price
+2025-05-10 16:30:37,305 - INFO - Retrying...
+2025-05-10 16:30:37,806 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:30:41,304 - INFO - Available!
+2025-05-10 16:30:41,308 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:30:41,308 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:31:11,309 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:31:13,860 - INFO - Available!
+2025-05-10 16:31:13,863 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:31:13,863 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:31:16,139 - INFO - Available!
+2025-05-10 16:31:16,141 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:31:16,142 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:31:18,868 - INFO - Available!
+2025-05-10 16:31:18,870 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:31:18,871 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:31:21,384 - INFO - Available!
+2025-05-10 16:31:21,389 - ERROR - Error with price
+2025-05-10 16:31:21,389 - INFO - Retrying...
+2025-05-10 16:31:21,890 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:31:24,480 - INFO - Available!
+2025-05-10 16:31:24,485 - ERROR - Error with price
+2025-05-10 16:31:24,485 - INFO - Retrying...
+2025-05-10 16:31:24,986 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:31:27,561 - INFO - Available!
+2025-05-10 16:31:27,564 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:31:27,564 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:31:57,565 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:32:00,192 - INFO - Available!
+2025-05-10 16:32:00,195 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:32:00,196 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:32:02,486 - INFO - Available!
+2025-05-10 16:32:02,488 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:32:02,488 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:32:05,143 - INFO - Available!
+2025-05-10 16:32:05,145 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:32:05,145 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:32:07,837 - INFO - Available!
+2025-05-10 16:32:07,843 - ERROR - Error with price
+2025-05-10 16:32:07,843 - INFO - Retrying...
+2025-05-10 16:32:08,344 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:32:10,995 - INFO - Available!
+2025-05-10 16:32:11,003 - ERROR - Error with price
+2025-05-10 16:32:11,003 - INFO - Retrying...
+2025-05-10 16:32:11,503 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:32:14,191 - INFO - Available!
+2025-05-10 16:32:14,193 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:32:14,193 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:32:44,195 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:32:47,017 - INFO - Available!
+2025-05-10 16:32:47,022 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:32:47,023 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:32:49,502 - INFO - Available!
+2025-05-10 16:32:49,505 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:32:49,506 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:32:52,335 - INFO - Available!
+2025-05-10 16:32:52,337 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:32:52,338 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:32:55,078 - INFO - Available!
+2025-05-10 16:32:55,088 - ERROR - Error with price
+2025-05-10 16:32:55,088 - INFO - Retrying...
+2025-05-10 16:32:55,589 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:32:58,108 - INFO - Available!
+2025-05-10 16:32:58,113 - ERROR - Error with price
+2025-05-10 16:32:58,113 - INFO - Retrying...
+2025-05-10 16:32:58,614 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:33:01,457 - INFO - Available!
+2025-05-10 16:33:01,460 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:33:01,460 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:33:31,461 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:33:34,184 - INFO - Available!
+2025-05-10 16:33:34,187 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:33:34,188 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:33:36,557 - INFO - Available!
+2025-05-10 16:33:36,560 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:33:36,561 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:33:39,122 - INFO - Available!
+2025-05-10 16:33:39,124 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:33:39,124 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:33:39,639 - INFO - Available!
+2025-05-10 16:33:39,640 - ERROR - Error with price
+2025-05-10 16:33:39,640 - INFO - Retrying...
+2025-05-10 16:33:40,141 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:33:42,673 - INFO - Available!
+2025-05-10 16:33:42,678 - ERROR - Error with price
+2025-05-10 16:33:42,678 - INFO - Retrying...
+2025-05-10 16:33:43,179 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:33:45,744 - INFO - Available!
+2025-05-10 16:33:45,747 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:33:45,747 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:34:15,749 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:34:18,363 - INFO - Available!
+2025-05-10 16:34:18,366 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:34:18,367 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:34:20,682 - INFO - Available!
+2025-05-10 16:34:20,684 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:34:20,684 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:34:23,204 - INFO - Available!
+2025-05-10 16:34:23,206 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:34:23,207 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:34:25,740 - INFO - Available!
+2025-05-10 16:34:25,743 - ERROR - Error with price
+2025-05-10 16:34:25,743 - INFO - Retrying...
+2025-05-10 16:34:26,244 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:34:26,796 - INFO - Available!
+2025-05-10 16:34:26,797 - ERROR - Error with price
+2025-05-10 16:34:26,797 - INFO - Retrying...
+2025-05-10 16:34:27,298 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:34:27,819 - INFO - Available!
+2025-05-10 16:34:27,820 - ERROR - Error with price
+2025-05-10 16:34:27,820 - INFO - Retrying...
+2025-05-10 16:34:28,321 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:34:30,873 - INFO - Available!
+2025-05-10 16:34:30,876 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:34:30,876 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:35:00,877 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:35:03,448 - INFO - Available!
+2025-05-10 16:35:03,451 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:35:03,451 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:35:04,018 - INFO - Available!
+2025-05-10 16:35:04,019 - ERROR - Error with price
+2025-05-10 16:35:04,019 - INFO - Retrying...
+2025-05-10 16:35:04,520 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:35:05,047 - INFO - Available!
+2025-05-10 16:35:05,048 - ERROR - Error with price
+2025-05-10 16:35:05,048 - INFO - Retrying...
+2025-05-10 16:35:05,549 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:35:06,086 - INFO - Available!
+2025-05-10 16:35:06,087 - ERROR - Error with price
+2025-05-10 16:35:06,087 - INFO - Retrying...
+2025-05-10 16:35:06,588 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:35:07,161 - INFO - Available!
+2025-05-10 16:35:07,162 - ERROR - Error with price
+2025-05-10 16:35:07,162 - INFO - Retrying...
+2025-05-10 16:35:07,663 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:35:08,193 - INFO - Available!
+2025-05-10 16:35:08,194 - ERROR - Error with price
+2025-05-10 16:35:08,194 - INFO - Retrying...
+2025-05-10 16:35:08,695 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:35:09,258 - INFO - Available!
+2025-05-10 16:35:09,259 - ERROR - Error with price
+2025-05-10 16:35:09,259 - INFO - Retrying...
+2025-05-10 16:35:09,760 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:35:10,312 - INFO - Available!
+2025-05-10 16:35:10,313 - ERROR - Error with price
+2025-05-10 16:35:10,313 - INFO - Retrying...
+2025-05-10 16:35:10,814 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:35:13,350 - INFO - Available!
+2025-05-10 16:35:13,353 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:35:13,353 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:35:43,355 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:35:43,973 - INFO - Available!
+2025-05-10 16:35:43,974 - ERROR - Error with price
+2025-05-10 16:35:43,974 - INFO - Retrying...
+2025-05-10 16:35:44,475 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:35:47,543 - INFO - Available!
+2025-05-10 16:35:47,546 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:35:47,546 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:35:48,212 - INFO - Available!
+2025-05-10 16:35:48,213 - ERROR - Error with price
+2025-05-10 16:35:48,213 - INFO - Retrying...
+2025-05-10 16:35:48,714 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:35:49,338 - INFO - Available!
+2025-05-10 16:35:49,339 - ERROR - Error with price
+2025-05-10 16:35:49,339 - INFO - Retrying...
+2025-05-10 16:35:49,840 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:35:50,762 - INFO - Available!
+2025-05-10 16:35:50,763 - ERROR - Error with price
+2025-05-10 16:35:50,763 - INFO - Retrying...
+2025-05-10 16:35:51,264 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:35:51,888 - INFO - Available!
+2025-05-10 16:35:51,889 - ERROR - Error with price
+2025-05-10 16:35:51,889 - INFO - Retrying...
+2025-05-10 16:35:52,390 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:35:53,161 - INFO - Available!
+2025-05-10 16:35:53,162 - ERROR - Error with price
+2025-05-10 16:35:53,162 - INFO - Retrying...
+2025-05-10 16:35:53,663 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:35:54,277 - INFO - Available!
+2025-05-10 16:35:54,278 - ERROR - Error with price
+2025-05-10 16:35:54,279 - INFO - Retrying...
+2025-05-10 16:35:54,779 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:35:55,558 - INFO - Available!
+2025-05-10 16:35:55,560 - ERROR - Error with price
+2025-05-10 16:35:55,560 - INFO - Retrying...
+2025-05-10 16:35:56,060 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:35:58,713 - INFO - Available!
+2025-05-10 16:35:58,715 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:35:58,715 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:36:28,717 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:36:29,318 - INFO - Available!
+2025-05-10 16:36:29,319 - ERROR - Error with price
+2025-05-10 16:36:29,319 - INFO - Retrying...
+2025-05-10 16:36:29,820 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:36:32,427 - INFO - Available!
+2025-05-10 16:36:32,430 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:36:32,430 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:36:32,995 - INFO - Available!
+2025-05-10 16:36:32,997 - ERROR - Error with price
+2025-05-10 16:36:32,997 - INFO - Retrying...
+2025-05-10 16:36:33,498 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:36:34,096 - INFO - Available!
+2025-05-10 16:36:34,097 - ERROR - Error with price
+2025-05-10 16:36:34,097 - INFO - Retrying...
+2025-05-10 16:36:34,598 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:36:37,218 - INFO - Available!
+2025-05-10 16:36:37,221 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:36:37,221 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:36:37,777 - INFO - Available!
+2025-05-10 16:36:37,778 - ERROR - Error with price
+2025-05-10 16:36:37,778 - INFO - Retrying...
+2025-05-10 16:36:38,279 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:36:38,809 - INFO - Available!
+2025-05-10 16:36:38,810 - ERROR - Error with price
+2025-05-10 16:36:38,810 - INFO - Retrying...
+2025-05-10 16:36:39,311 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:36:39,839 - INFO - Available!
+2025-05-10 16:36:39,840 - ERROR - Error with price
+2025-05-10 16:36:39,840 - INFO - Retrying...
+2025-05-10 16:36:40,341 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:36:43,138 - INFO - Available!
+2025-05-10 16:36:43,140 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:36:43,140 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:37:13,142 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:37:15,858 - INFO - Available!
+2025-05-10 16:37:15,861 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:37:15,862 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:37:18,351 - INFO - Available!
+2025-05-10 16:37:18,353 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:37:18,354 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:37:20,945 - INFO - Available!
+2025-05-10 16:37:20,947 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:37:20,948 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:37:23,520 - INFO - Available!
+2025-05-10 16:37:23,524 - ERROR - Error with price
+2025-05-10 16:37:23,524 - INFO - Retrying...
+2025-05-10 16:37:24,025 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:37:26,416 - INFO - Available!
+2025-05-10 16:37:26,421 - ERROR - Error with price
+2025-05-10 16:37:26,421 - INFO - Retrying...
+2025-05-10 16:37:26,922 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:37:27,481 - INFO - Available!
+2025-05-10 16:37:27,482 - ERROR - Error with price
+2025-05-10 16:37:27,482 - INFO - Retrying...
+2025-05-10 16:37:27,983 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:37:30,590 - INFO - Available!
+2025-05-10 16:37:30,593 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:37:30,593 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:38:00,594 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:38:03,291 - INFO - Available!
+2025-05-10 16:38:03,294 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:38:03,294 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:38:05,549 - INFO - Available!
+2025-05-10 16:38:05,551 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:38:05,552 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:38:08,135 - INFO - Available!
+2025-05-10 16:38:08,137 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:38:08,137 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:38:10,808 - INFO - Available!
+2025-05-10 16:38:10,812 - ERROR - Error with price
+2025-05-10 16:38:10,812 - INFO - Retrying...
+2025-05-10 16:38:11,313 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:38:13,868 - INFO - Available!
+2025-05-10 16:38:13,874 - ERROR - Error with price
+2025-05-10 16:38:13,874 - INFO - Retrying...
+2025-05-10 16:38:14,375 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:38:17,092 - INFO - Available!
+2025-05-10 16:38:17,095 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:38:17,095 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:38:47,096 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:38:49,764 - INFO - Available!
+2025-05-10 16:38:49,766 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:38:49,767 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:38:52,035 - INFO - Available!
+2025-05-10 16:38:52,037 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:38:52,038 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:38:54,598 - INFO - Available!
+2025-05-10 16:38:54,600 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:38:54,600 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:38:57,032 - INFO - Available!
+2025-05-10 16:38:57,037 - ERROR - Error with price
+2025-05-10 16:38:57,037 - INFO - Retrying...
+2025-05-10 16:38:57,539 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:39:00,133 - INFO - Available!
+2025-05-10 16:39:00,138 - ERROR - Error with price
+2025-05-10 16:39:00,138 - INFO - Retrying...
+2025-05-10 16:39:00,639 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:39:03,237 - INFO - Available!
+2025-05-10 16:39:03,239 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:39:03,239 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:39:33,241 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:39:35,989 - INFO - Available!
+2025-05-10 16:39:35,992 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:39:35,993 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:39:38,349 - INFO - Available!
+2025-05-10 16:39:38,350 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:39:38,351 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:39:40,954 - INFO - Available!
+2025-05-10 16:39:40,956 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:39:40,957 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:39:43,651 - INFO - Available!
+2025-05-10 16:39:43,656 - ERROR - Error with price
+2025-05-10 16:39:43,656 - INFO - Retrying...
+2025-05-10 16:39:44,157 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:39:46,502 - INFO - Available!
+2025-05-10 16:39:46,506 - ERROR - Error with price
+2025-05-10 16:39:46,506 - INFO - Retrying...
+2025-05-10 16:39:47,008 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:39:49,747 - INFO - Available!
+2025-05-10 16:39:49,750 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:39:49,750 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:40:19,751 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:40:22,396 - INFO - Available!
+2025-05-10 16:40:22,399 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:40:22,399 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:40:24,712 - INFO - Available!
+2025-05-10 16:40:24,714 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:40:24,715 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:40:27,195 - INFO - Available!
+2025-05-10 16:40:27,198 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:40:27,198 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:40:29,693 - INFO - Available!
+2025-05-10 16:40:29,698 - ERROR - Error with price
+2025-05-10 16:40:29,698 - INFO - Retrying...
+2025-05-10 16:40:30,199 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:40:32,848 - INFO - Available!
+2025-05-10 16:40:32,853 - ERROR - Error with price
+2025-05-10 16:40:32,853 - INFO - Retrying...
+2025-05-10 16:40:33,354 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:40:35,894 - INFO - Available!
+2025-05-10 16:40:35,897 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:40:35,897 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:41:05,899 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:41:08,495 - INFO - Available!
+2025-05-10 16:41:08,498 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:41:08,499 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:41:10,826 - INFO - Available!
+2025-05-10 16:41:10,828 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:41:10,829 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:41:13,534 - INFO - Available!
+2025-05-10 16:41:13,537 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:41:13,537 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:41:15,960 - INFO - Available!
+2025-05-10 16:41:15,964 - ERROR - Error with price
+2025-05-10 16:41:15,964 - INFO - Retrying...
+2025-05-10 16:41:16,466 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:41:18,918 - INFO - Available!
+2025-05-10 16:41:18,922 - ERROR - Error with price
+2025-05-10 16:41:18,922 - INFO - Retrying...
+2025-05-10 16:41:19,423 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:41:22,233 - INFO - Available!
+2025-05-10 16:41:22,237 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:41:22,237 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:41:52,239 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:41:55,080 - INFO - Available!
+2025-05-10 16:41:55,082 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:41:55,083 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:41:57,549 - INFO - Available!
+2025-05-10 16:41:57,551 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:41:57,551 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:42:00,102 - INFO - Available!
+2025-05-10 16:42:00,104 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:42:00,105 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:42:02,510 - INFO - Available!
+2025-05-10 16:42:02,516 - ERROR - Error with price
+2025-05-10 16:42:02,516 - INFO - Retrying...
+2025-05-10 16:42:03,017 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:42:05,626 - INFO - Available!
+2025-05-10 16:42:05,631 - ERROR - Error with price
+2025-05-10 16:42:05,631 - INFO - Retrying...
+2025-05-10 16:42:06,132 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:42:08,702 - INFO - Available!
+2025-05-10 16:42:08,705 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:42:08,705 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:42:38,706 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:42:41,270 - INFO - Available!
+2025-05-10 16:42:41,272 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:42:41,273 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:42:43,620 - INFO - Available!
+2025-05-10 16:42:43,622 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:42:43,622 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:42:46,208 - INFO - Available!
+2025-05-10 16:42:46,210 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:42:46,211 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:42:48,744 - INFO - Available!
+2025-05-10 16:42:48,749 - ERROR - Error with price
+2025-05-10 16:42:48,749 - INFO - Retrying...
+2025-05-10 16:42:49,250 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:42:51,674 - INFO - Available!
+2025-05-10 16:42:51,678 - ERROR - Error with price
+2025-05-10 16:42:51,678 - INFO - Retrying...
+2025-05-10 16:42:52,180 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:42:55,029 - INFO - Available!
+2025-05-10 16:42:55,033 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:42:55,033 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:43:25,035 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:43:28,816 - INFO - Available!
+2025-05-10 16:43:28,819 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:43:28,820 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:43:31,114 - INFO - Available!
+2025-05-10 16:43:31,116 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:43:31,116 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:43:33,742 - INFO - Available!
+2025-05-10 16:43:33,744 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:43:33,744 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:43:36,307 - INFO - Available!
+2025-05-10 16:43:36,312 - ERROR - Error with price
+2025-05-10 16:43:36,312 - INFO - Retrying...
+2025-05-10 16:43:36,813 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:43:39,242 - INFO - Available!
+2025-05-10 16:43:39,247 - ERROR - Error with price
+2025-05-10 16:43:39,247 - INFO - Retrying...
+2025-05-10 16:43:39,748 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:43:42,378 - INFO - Available!
+2025-05-10 16:43:42,380 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:43:42,381 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:44:12,382 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:44:14,990 - INFO - Available!
+2025-05-10 16:44:14,992 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:44:14,993 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:44:17,386 - INFO - Available!
+2025-05-10 16:44:17,388 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:44:17,388 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:44:20,232 - INFO - Available!
+2025-05-10 16:44:20,234 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:44:20,235 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:44:22,670 - INFO - Available!
+2025-05-10 16:44:22,675 - ERROR - Error with price
+2025-05-10 16:44:22,675 - INFO - Retrying...
+2025-05-10 16:44:23,176 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:44:25,682 - INFO - Available!
+2025-05-10 16:44:25,686 - ERROR - Error with price
+2025-05-10 16:44:25,686 - INFO - Retrying...
+2025-05-10 16:44:26,187 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:44:28,898 - INFO - Available!
+2025-05-10 16:44:28,900 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:44:28,900 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:44:58,902 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:45:01,589 - INFO - Available!
+2025-05-10 16:45:01,592 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:45:01,592 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:45:03,815 - INFO - Available!
+2025-05-10 16:45:03,817 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:45:03,818 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:45:06,382 - INFO - Available!
+2025-05-10 16:45:06,384 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:45:06,385 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:45:08,907 - INFO - Available!
+2025-05-10 16:45:08,912 - ERROR - Error with price
+2025-05-10 16:45:08,912 - INFO - Retrying...
+2025-05-10 16:45:09,413 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:45:11,959 - INFO - Available!
+2025-05-10 16:45:11,964 - ERROR - Error with price
+2025-05-10 16:45:11,964 - INFO - Retrying...
+2025-05-10 16:45:12,465 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:45:15,220 - INFO - Available!
+2025-05-10 16:45:15,223 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:45:15,223 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:45:45,224 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:45:47,941 - INFO - Available!
+2025-05-10 16:45:47,944 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:45:47,944 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:45:50,165 - INFO - Available!
+2025-05-10 16:45:50,167 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:45:50,168 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:45:52,786 - INFO - Available!
+2025-05-10 16:45:52,788 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:45:52,788 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:45:55,216 - INFO - Available!
+2025-05-10 16:45:55,221 - ERROR - Error with price
+2025-05-10 16:45:55,221 - INFO - Retrying...
+2025-05-10 16:45:55,722 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:45:58,161 - INFO - Available!
+2025-05-10 16:45:58,166 - ERROR - Error with price
+2025-05-10 16:45:58,166 - INFO - Retrying...
+2025-05-10 16:45:58,667 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:46:01,386 - INFO - Available!
+2025-05-10 16:46:01,389 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:46:01,389 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:46:31,390 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:46:33,932 - INFO - Available!
+2025-05-10 16:46:33,935 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:46:33,936 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:46:36,305 - INFO - Available!
+2025-05-10 16:46:36,307 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:46:36,308 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:46:38,807 - INFO - Available!
+2025-05-10 16:46:38,809 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:46:38,809 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:46:41,426 - INFO - Available!
+2025-05-10 16:46:41,431 - ERROR - Error with price
+2025-05-10 16:46:41,431 - INFO - Retrying...
+2025-05-10 16:46:41,931 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:46:44,414 - INFO - Available!
+2025-05-10 16:46:44,419 - ERROR - Error with price
+2025-05-10 16:46:44,419 - INFO - Retrying...
+2025-05-10 16:46:44,920 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:46:47,612 - INFO - Available!
+2025-05-10 16:46:47,615 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:46:47,615 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:47:17,616 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:47:20,292 - INFO - Available!
+2025-05-10 16:47:20,294 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:47:20,295 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:47:22,609 - INFO - Available!
+2025-05-10 16:47:22,611 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:47:22,612 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:47:25,142 - INFO - Available!
+2025-05-10 16:47:25,144 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:47:25,144 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:47:27,596 - INFO - Available!
+2025-05-10 16:47:27,601 - ERROR - Error with price
+2025-05-10 16:47:27,601 - INFO - Retrying...
+2025-05-10 16:47:28,102 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:47:30,553 - INFO - Available!
+2025-05-10 16:47:30,558 - ERROR - Error with price
+2025-05-10 16:47:30,558 - INFO - Retrying...
+2025-05-10 16:47:31,059 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:47:33,763 - INFO - Available!
+2025-05-10 16:47:33,766 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:47:33,766 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:48:03,767 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:48:06,794 - INFO - Available!
+2025-05-10 16:48:06,797 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:48:06,797 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:48:09,446 - INFO - Available!
+2025-05-10 16:48:09,449 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:48:09,449 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:48:12,156 - INFO - Available!
+2025-05-10 16:48:12,158 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:48:12,158 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:48:14,747 - INFO - Available!
+2025-05-10 16:48:14,752 - ERROR - Error with price
+2025-05-10 16:48:14,752 - INFO - Retrying...
+2025-05-10 16:48:15,342 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:48:17,929 - INFO - Available!
+2025-05-10 16:48:17,933 - ERROR - Error with price
+2025-05-10 16:48:17,933 - INFO - Retrying...
+2025-05-10 16:48:18,434 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:48:21,325 - INFO - Available!
+2025-05-10 16:48:21,328 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:48:21,328 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:48:51,329 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:48:54,071 - INFO - Available!
+2025-05-10 16:48:54,074 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:48:54,075 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:48:56,473 - INFO - Available!
+2025-05-10 16:48:56,475 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:48:56,475 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:48:59,349 - INFO - Available!
+2025-05-10 16:48:59,352 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:48:59,352 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:49:01,825 - INFO - Available!
+2025-05-10 16:49:01,830 - ERROR - Error with price
+2025-05-10 16:49:01,830 - INFO - Retrying...
+2025-05-10 16:49:02,331 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:49:04,854 - INFO - Available!
+2025-05-10 16:49:04,859 - ERROR - Error with price
+2025-05-10 16:49:04,859 - INFO - Retrying...
+2025-05-10 16:49:05,360 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:49:08,247 - INFO - Available!
+2025-05-10 16:49:08,250 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:49:08,250 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:49:38,251 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:49:40,821 - INFO - Available!
+2025-05-10 16:49:40,823 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:49:40,824 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:49:43,132 - INFO - Available!
+2025-05-10 16:49:43,134 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:49:43,134 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:49:45,614 - INFO - Available!
+2025-05-10 16:49:45,616 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:49:45,617 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:49:48,113 - INFO - Available!
+2025-05-10 16:49:48,118 - ERROR - Error with price
+2025-05-10 16:49:48,118 - INFO - Retrying...
+2025-05-10 16:49:48,619 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:49:51,113 - INFO - Available!
+2025-05-10 16:49:51,119 - ERROR - Error with price
+2025-05-10 16:49:51,119 - INFO - Retrying...
+2025-05-10 16:49:51,620 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:49:54,240 - INFO - Available!
+2025-05-10 16:49:54,242 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:49:54,242 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:50:24,244 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:50:26,938 - INFO - Available!
+2025-05-10 16:50:26,941 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:50:26,941 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:50:29,334 - INFO - Available!
+2025-05-10 16:50:29,335 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:50:29,336 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:50:32,145 - INFO - Available!
+2025-05-10 16:50:32,148 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:50:32,148 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:50:34,703 - INFO - Available!
+2025-05-10 16:50:34,707 - ERROR - Error with price
+2025-05-10 16:50:34,707 - INFO - Retrying...
+2025-05-10 16:50:35,209 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:50:37,721 - INFO - Available!
+2025-05-10 16:50:37,725 - ERROR - Error with price
+2025-05-10 16:50:37,725 - INFO - Retrying...
+2025-05-10 16:50:38,226 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:50:41,182 - INFO - Available!
+2025-05-10 16:50:41,187 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:50:41,187 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:51:11,188 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:51:14,000 - INFO - Available!
+2025-05-10 16:51:14,002 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:51:14,003 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:51:16,336 - INFO - Available!
+2025-05-10 16:51:16,338 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:51:16,338 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:51:18,823 - INFO - Available!
+2025-05-10 16:51:18,825 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:51:18,825 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:51:21,205 - INFO - Available!
+2025-05-10 16:51:21,209 - ERROR - Error with price
+2025-05-10 16:51:21,209 - INFO - Retrying...
+2025-05-10 16:51:21,711 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:51:24,116 - INFO - Available!
+2025-05-10 16:51:24,121 - ERROR - Error with price
+2025-05-10 16:51:24,121 - INFO - Retrying...
+2025-05-10 16:51:24,622 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:51:27,347 - INFO - Available!
+2025-05-10 16:51:27,350 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:51:27,350 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:51:57,352 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:52:00,154 - INFO - Available!
+2025-05-10 16:52:00,156 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:52:00,157 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:52:02,636 - INFO - Available!
+2025-05-10 16:52:02,638 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:52:02,639 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:52:05,308 - INFO - Available!
+2025-05-10 16:52:05,310 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:52:05,310 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:52:07,755 - INFO - Available!
+2025-05-10 16:52:07,759 - ERROR - Error with price
+2025-05-10 16:52:07,760 - INFO - Retrying...
+2025-05-10 16:52:08,260 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:52:10,644 - INFO - Available!
+2025-05-10 16:52:10,649 - ERROR - Error with price
+2025-05-10 16:52:10,649 - INFO - Retrying...
+2025-05-10 16:52:11,150 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:52:13,872 - INFO - Available!
+2025-05-10 16:52:13,875 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:52:13,875 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:52:43,876 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:52:46,497 - INFO - Available!
+2025-05-10 16:52:46,500 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:52:46,500 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:52:48,904 - INFO - Available!
+2025-05-10 16:52:48,906 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:52:48,907 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:52:51,530 - INFO - Available!
+2025-05-10 16:52:51,533 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:52:51,534 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:52:54,161 - INFO - Available!
+2025-05-10 16:52:54,168 - ERROR - Error with price
+2025-05-10 16:52:54,168 - INFO - Retrying...
+2025-05-10 16:52:54,670 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:52:57,252 - INFO - Available!
+2025-05-10 16:52:57,258 - ERROR - Error with price
+2025-05-10 16:52:57,258 - INFO - Retrying...
+2025-05-10 16:52:57,759 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:53:00,393 - INFO - Available!
+2025-05-10 16:53:00,396 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:53:00,396 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:53:30,397 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:53:33,148 - INFO - Available!
+2025-05-10 16:53:33,151 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:53:33,152 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:53:35,581 - INFO - Available!
+2025-05-10 16:53:35,583 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:53:35,584 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:53:38,238 - INFO - Available!
+2025-05-10 16:53:38,240 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:53:38,241 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:53:40,676 - INFO - Available!
+2025-05-10 16:53:40,680 - ERROR - Error with price
+2025-05-10 16:53:40,681 - INFO - Retrying...
+2025-05-10 16:53:41,182 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:53:43,700 - INFO - Available!
+2025-05-10 16:53:43,705 - ERROR - Error with price
+2025-05-10 16:53:43,705 - INFO - Retrying...
+2025-05-10 16:53:44,206 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:53:46,831 - INFO - Available!
+2025-05-10 16:53:46,834 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:53:46,834 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:54:16,835 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:54:19,888 - INFO - Available!
+2025-05-10 16:54:19,890 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:54:19,891 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:54:22,179 - INFO - Available!
+2025-05-10 16:54:22,185 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:54:22,186 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:54:24,811 - INFO - Available!
+2025-05-10 16:54:24,813 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:54:24,813 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:54:27,316 - INFO - Available!
+2025-05-10 16:54:27,320 - ERROR - Error with price
+2025-05-10 16:54:27,320 - INFO - Retrying...
+2025-05-10 16:54:27,822 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:54:30,198 - INFO - Available!
+2025-05-10 16:54:30,202 - ERROR - Error with price
+2025-05-10 16:54:30,202 - INFO - Retrying...
+2025-05-10 16:54:30,703 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:54:33,406 - INFO - Available!
+2025-05-10 16:54:33,409 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:54:33,409 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:55:03,410 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:55:05,915 - INFO - Available!
+2025-05-10 16:55:05,918 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:55:05,919 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:55:08,237 - INFO - Available!
+2025-05-10 16:55:08,239 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:55:08,240 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:55:10,913 - INFO - Available!
+2025-05-10 16:55:10,915 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:55:10,915 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:55:13,387 - INFO - Available!
+2025-05-10 16:55:13,392 - ERROR - Error with price
+2025-05-10 16:55:13,392 - INFO - Retrying...
+2025-05-10 16:55:13,893 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:55:16,497 - INFO - Available!
+2025-05-10 16:55:16,502 - ERROR - Error with price
+2025-05-10 16:55:16,502 - INFO - Retrying...
+2025-05-10 16:55:17,003 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:55:19,805 - INFO - Available!
+2025-05-10 16:55:19,808 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:55:19,808 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:55:49,809 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:55:52,568 - INFO - Available!
+2025-05-10 16:55:52,571 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:55:52,571 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:55:54,966 - INFO - Available!
+2025-05-10 16:55:54,968 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:55:54,968 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:55:57,645 - INFO - Available!
+2025-05-10 16:55:57,647 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:55:57,647 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:56:00,157 - INFO - Available!
+2025-05-10 16:56:00,162 - ERROR - Error with price
+2025-05-10 16:56:00,162 - INFO - Retrying...
+2025-05-10 16:56:00,663 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:56:03,130 - INFO - Available!
+2025-05-10 16:56:03,135 - ERROR - Error with price
+2025-05-10 16:56:03,135 - INFO - Retrying...
+2025-05-10 16:56:03,636 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:56:06,330 - INFO - Available!
+2025-05-10 16:56:06,332 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:56:06,333 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:56:36,334 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:56:38,956 - INFO - Available!
+2025-05-10 16:56:38,958 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:56:38,959 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:56:41,457 - INFO - Available!
+2025-05-10 16:56:41,459 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:56:41,459 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:56:44,359 - INFO - Available!
+2025-05-10 16:56:44,361 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:56:44,361 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:56:47,077 - INFO - Available!
+2025-05-10 16:56:47,082 - ERROR - Error with price
+2025-05-10 16:56:47,082 - INFO - Retrying...
+2025-05-10 16:56:47,584 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:56:50,314 - INFO - Available!
+2025-05-10 16:56:50,321 - ERROR - Error with price
+2025-05-10 16:56:50,321 - INFO - Retrying...
+2025-05-10 16:56:50,823 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:56:53,875 - INFO - Available!
+2025-05-10 16:56:53,881 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:56:53,881 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:57:23,882 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:57:26,721 - INFO - Available!
+2025-05-10 16:57:26,724 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:57:26,725 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:57:29,132 - INFO - Available!
+2025-05-10 16:57:29,134 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:57:29,134 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:57:31,939 - INFO - Available!
+2025-05-10 16:57:31,942 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:57:31,942 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:57:34,582 - INFO - Available!
+2025-05-10 16:57:34,587 - ERROR - Error with price
+2025-05-10 16:57:34,587 - INFO - Retrying...
+2025-05-10 16:57:35,089 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:57:37,682 - INFO - Available!
+2025-05-10 16:57:37,687 - ERROR - Error with price
+2025-05-10 16:57:37,687 - INFO - Retrying...
+2025-05-10 16:57:38,188 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:57:41,014 - INFO - Available!
+2025-05-10 16:57:41,017 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:57:41,017 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:58:11,019 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:58:13,633 - INFO - Available!
+2025-05-10 16:58:13,636 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:58:13,636 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:58:15,967 - INFO - Available!
+2025-05-10 16:58:15,969 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:58:15,970 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:58:18,655 - INFO - Available!
+2025-05-10 16:58:18,657 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:58:18,658 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:58:21,075 - INFO - Available!
+2025-05-10 16:58:21,081 - ERROR - Error with price
+2025-05-10 16:58:21,081 - INFO - Retrying...
+2025-05-10 16:58:21,582 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:58:23,983 - INFO - Available!
+2025-05-10 16:58:23,991 - ERROR - Error with price
+2025-05-10 16:58:23,991 - INFO - Retrying...
+2025-05-10 16:58:24,492 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:58:27,253 - INFO - Available!
+2025-05-10 16:58:27,257 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:58:27,257 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:58:57,258 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:58:59,840 - INFO - Available!
+2025-05-10 16:58:59,843 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:58:59,843 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:59:02,184 - INFO - Available!
+2025-05-10 16:59:02,185 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:59:02,186 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:59:05,097 - INFO - Available!
+2025-05-10 16:59:05,099 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:59:05,100 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:59:07,524 - INFO - Available!
+2025-05-10 16:59:07,528 - ERROR - Error with price
+2025-05-10 16:59:07,528 - INFO - Retrying...
+2025-05-10 16:59:08,029 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:59:10,546 - INFO - Available!
+2025-05-10 16:59:10,550 - ERROR - Error with price
+2025-05-10 16:59:10,550 - INFO - Retrying...
+2025-05-10 16:59:11,051 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:59:13,589 - INFO - Available!
+2025-05-10 16:59:13,592 - INFO - Price has not changed. Still 3025.0
+2025-05-10 16:59:13,592 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 16:59:43,594 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 16:59:46,379 - INFO - Available!
+2025-05-10 16:59:46,381 - INFO - Price has not changed. Still 25934.94
+2025-05-10 16:59:46,382 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 16:59:48,766 - INFO - Available!
+2025-05-10 16:59:48,768 - INFO - Price has not changed. Still 5518.16
+2025-05-10 16:59:48,768 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 16:59:51,625 - INFO - Available!
+2025-05-10 16:59:51,627 - INFO - Price has not changed. Still 9984.6
+2025-05-10 16:59:51,628 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:59:54,098 - INFO - Available!
+2025-05-10 16:59:54,103 - ERROR - Error with price
+2025-05-10 16:59:54,103 - INFO - Retrying...
+2025-05-10 16:59:54,604 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 16:59:57,041 - INFO - Available!
+2025-05-10 16:59:57,045 - ERROR - Error with price
+2025-05-10 16:59:57,045 - INFO - Retrying...
+2025-05-10 16:59:57,546 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:00:00,249 - INFO - Available!
+2025-05-10 17:00:00,252 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:00:00,252 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:00:30,253 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:00:33,113 - INFO - Available!
+2025-05-10 17:00:33,116 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:00:33,116 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:00:35,552 - INFO - Available!
+2025-05-10 17:00:35,554 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:00:35,554 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:00:38,174 - INFO - Available!
+2025-05-10 17:00:38,176 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:00:38,177 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:00:40,545 - INFO - Available!
+2025-05-10 17:00:40,549 - ERROR - Error with price
+2025-05-10 17:00:40,549 - INFO - Retrying...
+2025-05-10 17:00:41,051 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:00:43,527 - INFO - Available!
+2025-05-10 17:00:43,531 - ERROR - Error with price
+2025-05-10 17:00:43,532 - INFO - Retrying...
+2025-05-10 17:00:44,033 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:00:47,201 - INFO - Available!
+2025-05-10 17:00:47,203 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:00:47,203 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:01:17,205 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:01:19,925 - INFO - Available!
+2025-05-10 17:01:19,929 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:01:19,930 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:01:22,249 - INFO - Available!
+2025-05-10 17:01:22,251 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:01:22,252 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:01:24,893 - INFO - Available!
+2025-05-10 17:01:24,895 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:01:24,896 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:01:27,397 - INFO - Available!
+2025-05-10 17:01:27,401 - ERROR - Error with price
+2025-05-10 17:01:27,402 - INFO - Retrying...
+2025-05-10 17:01:27,903 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:01:30,474 - INFO - Available!
+2025-05-10 17:01:30,478 - ERROR - Error with price
+2025-05-10 17:01:30,479 - INFO - Retrying...
+2025-05-10 17:01:30,980 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:01:33,920 - INFO - Available!
+2025-05-10 17:01:33,922 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:01:33,922 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:02:03,923 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:02:06,513 - INFO - Available!
+2025-05-10 17:02:06,517 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:02:06,518 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:02:08,993 - INFO - Available!
+2025-05-10 17:02:08,996 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:02:08,997 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:02:11,543 - INFO - Available!
+2025-05-10 17:02:11,545 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:02:11,545 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:02:14,047 - INFO - Available!
+2025-05-10 17:02:14,051 - ERROR - Error with price
+2025-05-10 17:02:14,051 - INFO - Retrying...
+2025-05-10 17:02:14,553 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:02:17,140 - INFO - Available!
+2025-05-10 17:02:17,145 - ERROR - Error with price
+2025-05-10 17:02:17,145 - INFO - Retrying...
+2025-05-10 17:02:17,646 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:02:20,320 - INFO - Available!
+2025-05-10 17:02:20,322 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:02:20,323 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:02:50,324 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:02:53,034 - INFO - Available!
+2025-05-10 17:02:53,038 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:02:53,039 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:02:55,569 - INFO - Available!
+2025-05-10 17:02:55,571 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:02:55,572 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:02:58,191 - INFO - Available!
+2025-05-10 17:02:58,193 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:02:58,193 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:03:00,623 - INFO - Available!
+2025-05-10 17:03:00,628 - ERROR - Error with price
+2025-05-10 17:03:00,628 - INFO - Retrying...
+2025-05-10 17:03:01,129 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:03:03,720 - INFO - Available!
+2025-05-10 17:03:03,725 - ERROR - Error with price
+2025-05-10 17:03:03,725 - INFO - Retrying...
+2025-05-10 17:03:04,226 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:03:06,932 - INFO - Available!
+2025-05-10 17:03:06,935 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:03:06,935 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:03:36,937 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:03:39,645 - INFO - Available!
+2025-05-10 17:03:39,647 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:03:39,648 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:03:41,929 - INFO - Available!
+2025-05-10 17:03:41,931 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:03:41,932 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:03:44,447 - INFO - Available!
+2025-05-10 17:03:44,449 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:03:44,450 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:03:46,867 - INFO - Available!
+2025-05-10 17:03:46,872 - ERROR - Error with price
+2025-05-10 17:03:46,872 - INFO - Retrying...
+2025-05-10 17:03:47,373 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:03:49,860 - INFO - Available!
+2025-05-10 17:03:49,865 - ERROR - Error with price
+2025-05-10 17:03:49,865 - INFO - Retrying...
+2025-05-10 17:03:50,366 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:03:53,137 - INFO - Available!
+2025-05-10 17:03:53,140 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:03:53,140 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:04:23,141 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:04:25,934 - INFO - Available!
+2025-05-10 17:04:25,937 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:04:25,937 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:04:28,202 - INFO - Available!
+2025-05-10 17:04:28,205 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:04:28,206 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:04:30,897 - INFO - Available!
+2025-05-10 17:04:30,899 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:04:30,900 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:04:33,361 - INFO - Available!
+2025-05-10 17:04:33,365 - ERROR - Error with price
+2025-05-10 17:04:33,365 - INFO - Retrying...
+2025-05-10 17:04:33,866 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:04:36,676 - INFO - Available!
+2025-05-10 17:04:36,680 - ERROR - Error with price
+2025-05-10 17:04:36,680 - INFO - Retrying...
+2025-05-10 17:04:37,181 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:04:39,894 - INFO - Available!
+2025-05-10 17:04:39,897 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:04:39,897 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:05:09,899 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:05:12,569 - INFO - Available!
+2025-05-10 17:05:12,572 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:05:12,572 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:05:15,063 - INFO - Available!
+2025-05-10 17:05:15,065 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:05:15,066 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:05:17,935 - INFO - Available!
+2025-05-10 17:05:17,937 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:05:17,938 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:05:20,356 - INFO - Available!
+2025-05-10 17:05:20,360 - ERROR - Error with price
+2025-05-10 17:05:20,360 - INFO - Retrying...
+2025-05-10 17:05:20,861 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:05:23,564 - INFO - Available!
+2025-05-10 17:05:23,569 - ERROR - Error with price
+2025-05-10 17:05:23,570 - INFO - Retrying...
+2025-05-10 17:05:24,072 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:05:27,076 - INFO - Available!
+2025-05-10 17:05:27,079 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:05:27,079 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:05:57,080 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:05:59,879 - INFO - Available!
+2025-05-10 17:05:59,882 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:05:59,882 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:06:02,253 - INFO - Available!
+2025-05-10 17:06:02,255 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:06:02,256 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:06:04,867 - INFO - Available!
+2025-05-10 17:06:04,869 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:06:04,869 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:06:07,325 - INFO - Available!
+2025-05-10 17:06:07,330 - ERROR - Error with price
+2025-05-10 17:06:07,330 - INFO - Retrying...
+2025-05-10 17:06:07,831 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:06:10,234 - INFO - Available!
+2025-05-10 17:06:10,239 - ERROR - Error with price
+2025-05-10 17:06:10,239 - INFO - Retrying...
+2025-05-10 17:06:10,740 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:06:13,476 - INFO - Available!
+2025-05-10 17:06:13,478 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:06:13,478 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:06:43,480 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:06:46,297 - INFO - Available!
+2025-05-10 17:06:46,302 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:06:46,302 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:06:48,809 - INFO - Available!
+2025-05-10 17:06:48,811 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:06:48,812 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:06:51,393 - INFO - Available!
+2025-05-10 17:06:51,395 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:06:51,395 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:06:53,892 - INFO - Available!
+2025-05-10 17:06:53,897 - ERROR - Error with price
+2025-05-10 17:06:53,897 - INFO - Retrying...
+2025-05-10 17:06:54,398 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:06:56,920 - INFO - Available!
+2025-05-10 17:06:56,925 - ERROR - Error with price
+2025-05-10 17:06:56,925 - INFO - Retrying...
+2025-05-10 17:06:57,426 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:07:00,202 - INFO - Available!
+2025-05-10 17:07:00,205 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:07:00,205 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:07:30,206 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:07:32,829 - INFO - Available!
+2025-05-10 17:07:32,831 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:07:32,832 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:07:35,193 - INFO - Available!
+2025-05-10 17:07:35,195 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:07:35,196 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:07:37,831 - INFO - Available!
+2025-05-10 17:07:37,833 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:07:37,833 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:07:40,369 - INFO - Available!
+2025-05-10 17:07:40,374 - ERROR - Error with price
+2025-05-10 17:07:40,374 - INFO - Retrying...
+2025-05-10 17:07:40,875 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:07:43,298 - INFO - Available!
+2025-05-10 17:07:43,302 - ERROR - Error with price
+2025-05-10 17:07:43,303 - INFO - Retrying...
+2025-05-10 17:07:43,803 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:07:46,525 - INFO - Available!
+2025-05-10 17:07:46,528 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:07:46,528 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:08:16,530 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:08:19,163 - INFO - Available!
+2025-05-10 17:08:19,166 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:08:19,167 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:08:21,750 - INFO - Available!
+2025-05-10 17:08:21,751 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:08:21,752 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:08:25,092 - INFO - Available!
+2025-05-10 17:08:25,094 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:08:25,095 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:08:28,657 - INFO - Available!
+2025-05-10 17:08:28,661 - ERROR - Error with price
+2025-05-10 17:08:28,661 - INFO - Retrying...
+2025-05-10 17:08:29,162 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:08:31,821 - INFO - Available!
+2025-05-10 17:08:31,826 - ERROR - Error with price
+2025-05-10 17:08:31,826 - INFO - Retrying...
+2025-05-10 17:08:32,327 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:08:35,417 - INFO - Available!
+2025-05-10 17:08:35,420 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:08:35,420 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:09:05,421 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:09:12,221 - INFO - Available!
+2025-05-10 17:09:12,224 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:09:12,225 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:09:19,805 - INFO - Available!
+2025-05-10 17:09:19,808 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:09:19,808 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:09:24,195 - INFO - Available!
+2025-05-10 17:09:24,197 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:09:24,198 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:09:29,444 - INFO - Available!
+2025-05-10 17:09:29,449 - ERROR - Error with price
+2025-05-10 17:09:29,449 - INFO - Retrying...
+2025-05-10 17:09:29,950 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:09:34,897 - INFO - Available!
+2025-05-10 17:09:34,901 - ERROR - Error with price
+2025-05-10 17:09:34,901 - INFO - Retrying...
+2025-05-10 17:09:35,402 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:09:40,757 - INFO - Available!
+2025-05-10 17:09:40,761 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:09:40,761 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:10:10,762 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:10:15,490 - INFO - Available!
+2025-05-10 17:10:15,493 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:10:15,494 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:10:18,714 - INFO - Available!
+2025-05-10 17:10:18,716 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:10:18,716 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:10:24,073 - INFO - Available!
+2025-05-10 17:10:24,075 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:10:24,076 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:10:31,032 - INFO - Available!
+2025-05-10 17:10:31,043 - ERROR - Error with price
+2025-05-10 17:10:31,043 - INFO - Retrying...
+2025-05-10 17:10:31,544 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:10:34,262 - INFO - Available!
+2025-05-10 17:10:34,267 - ERROR - Error with price
+2025-05-10 17:10:34,267 - INFO - Retrying...
+2025-05-10 17:10:34,768 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:10:37,501 - INFO - Available!
+2025-05-10 17:10:37,503 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:10:37,504 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:11:07,505 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:11:10,196 - INFO - Available!
+2025-05-10 17:11:10,198 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:11:10,199 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:11:12,572 - INFO - Available!
+2025-05-10 17:11:12,574 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:11:12,574 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:11:16,093 - INFO - Available!
+2025-05-10 17:11:16,097 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:11:16,098 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:11:22,007 - INFO - Available!
+2025-05-10 17:11:22,015 - ERROR - Error with price
+2025-05-10 17:11:22,015 - INFO - Retrying...
+2025-05-10 17:11:22,517 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:11:26,242 - INFO - Available!
+2025-05-10 17:11:26,247 - ERROR - Error with price
+2025-05-10 17:11:26,247 - INFO - Retrying...
+2025-05-10 17:11:26,748 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:11:31,660 - INFO - Available!
+2025-05-10 17:11:31,663 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:11:31,663 - INFO - Waiting for 30 seconds before checking again.
+2025-05-10 17:12:01,664 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:12:04,948 - INFO - Available!
+2025-05-10 17:12:04,950 - INFO - Price has not changed. Still 25934.94
+2025-05-10 17:12:04,951 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-10 17:12:09,321 - INFO - Available!
+2025-05-10 17:12:09,323 - INFO - Price has not changed. Still 5518.16
+2025-05-10 17:12:09,324 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-10 17:12:19,091 - INFO - Available!
+2025-05-10 17:12:19,094 - INFO - Price has not changed. Still 9984.6
+2025-05-10 17:12:19,094 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:12:26,350 - INFO - Available!
+2025-05-10 17:12:26,355 - ERROR - Error with price
+2025-05-10 17:12:26,355 - INFO - Retrying...
+2025-05-10 17:12:26,856 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-10 17:12:37,650 - INFO - Available!
+2025-05-10 17:12:37,655 - ERROR - Error with price
+2025-05-10 17:12:37,655 - INFO - Retrying...
+2025-05-10 17:12:38,156 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0156XHE90?smid=A1UNQM1SR2CHM&th=1
+2025-05-10 17:12:52,111 - INFO - Available!
+2025-05-10 17:12:52,114 - INFO - Price has not changed. Still 3025.0
+2025-05-10 17:12:52,114 - INFO - Waiting for 30 seconds before checking again.

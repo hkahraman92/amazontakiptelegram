@@ -13,14 +13,14 @@ import os
 #PARAMS
 SLEEP_TIME=0.5 #between attemps to fetch the price
 RUN_EVERY=30 #seconds = 0.5 minutes
-PRODUCTS_FILE= 'C:\\Users\\Harun\\PycharmProjects\\amazonpricealertTelegramBot\\products.ini'
-CONFIG_FILE = 'C:\\Users\\Harun\\PycharmProjects\\amazonpricealertTelegramBot\\config.ini'
+PRODUCTS_FILE= 'products.ini'
+CONFIG_FILE = 'config.ini'
 PRICE_DIFFERENCE=1 #1 dollar, min price difference to notify
 MAX_PRICE_RETRIES=30
 
 # Log yapılandırması
 logging.basicConfig(
-    filename='C:\\Users\\Harun\\PycharmProjects\\amazonpricealertTelegramBot\\amazon_price_alert.log',
+    filename='amazon_price_alert.log',
     filemode='a',
     format='%(asctime)s - %(levelname)s - %(message)s',
     level=logging.INFO
