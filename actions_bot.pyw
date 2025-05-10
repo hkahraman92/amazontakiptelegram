@@ -26,7 +26,7 @@ CONFIG_FILE = os.getenv("CONFIG_FILE", "C:\\Users\\Harun\\PycharmProjects\\amazo
 # Konfigürasyonu oku
 config_reader = configparser.ConfigParser()
 if not os.path.exists(CONFIG_FILE):
-    logging.error(f"Configuration file '{CONFIG_FILE}' not found.")
+    logging.error(f"Configuration file '{CONFIG_FILE}' not found..")
     raise FileNotFoundError(f"Configuration file '{CONFIG_FILE}' not found.")
 config_reader.read(CONFIG_FILE)
 
