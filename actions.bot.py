@@ -74,11 +74,20 @@ def read_value(input: str):
     return input[len("/add_item"):comma_index].strip(), input[comma_index + 1:].strip()
 
 async def write_product_to_file(item_id: int, name: str, url: str) -> None:
-    """Yeni bir ürünü dosyaya yazar."""
-    new_line = f"{item_id} = {name},$0,{url}\n"
+    config = configparser.ConfigParser()
+    if os.path.exists(PRODUCTS_FILE):
+        config.read(PRODUCTS_FILE)
+
+    if not config.has_section("PRODUCTS"):
+        config.add_section("PRODUCTS")
+
+    #config.set("PRODUCTS", str(item_id), f"{name},$0,{url}")
+    config.set("PRODUCTS", str(item_id), f"{name},0,{url}")
     try:
-        async with aiofiles.open(PRODUCTS_FILE, "a") as file:
-            await file.write(new_line)
+        async with aiofiles.open(PRODUCTS_FILE, "w") as file:
+            await file.write("")  # dosyayı temizle
+        with open(PRODUCTS_FILE, "w") as f:
+            config.write(f)
         logging.info(f"Added new product: {name}, URL: {url}")
     except Exception as e:
         logging.error(f"Error writing to file: {e}")

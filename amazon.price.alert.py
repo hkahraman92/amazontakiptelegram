@@ -83,7 +83,7 @@ def get_price_name(name, url):
         #print(name)
         logging.info(f"Product Name: {name}")
 
-    if "amazon.com.tr" in url:
+    if "amazon" or "amzn" in url:
         title = soup.find("span", class_="a-size-medium a-color-success")
         if title and "şu anda mevcut değil" in title.text.lower():
             #print("Currently unavailable")
@@ -169,7 +169,8 @@ async def check_price_change(id, name, previous_price, url):
                 if len(name)==0:
                     #print("Name updated from ", name, "to: ", name_new)
                     logging.info(f"Name updated from {name} to: {name_new}")
-                    products_file.set('PRODUCTS', id,f'{name_new},${current_price},{url}')
+                    #products_file.set('PRODUCTS', id,f'{name_new},${current_price},{url}')
+                    products_file.set('PRODUCTS', id, f'{name_new},{current_price},{url}')
                     with open(PRODUCTS_FILE, 'w') as productsFile:
                         products_file.write(productsFile)
 
@@ -187,7 +188,8 @@ async def check_price_change(id, name, previous_price, url):
                     # Update the price in the config file
                     #print("Price changed but not more than ", PRICE_DIFFERENCE)
                     logging.info(f"Price changed but not more than {PRICE_DIFFERENCE}")
-                    products_file.set('PRODUCTS', id,f'{name_new},${current_price},{url}')
+                    #products_file.set('PRODUCTS', id,f'{name_new},${current_price},{url}')
+                    products_file.set('PRODUCTS', id, f'{name_new},{current_price},{url}')
                     with open(PRODUCTS_FILE, 'w') as productsFile:
                         products_file.write(productsFile)
 
@@ -220,7 +222,8 @@ async def main():
 
         for id, info in products:
             name, price, url = info.split(',')
-            price=float(price.replace('$', ''))
+            #price=float(price.replace('$', ''))
+            price = float(price.replace('₺', '').replace('$', ''))
 
             #while True:
             # Yeni: başarısız denemelerde sadece 1-2 kere dene
