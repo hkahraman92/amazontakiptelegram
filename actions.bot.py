@@ -97,19 +97,16 @@ async def read_products() -> str:
     return "\n".join(f"Item {key}: {value}" for key, value in products)
 
 def get_last_item(products_file: str) -> int:
-    """Son ürünü dosyadan okur ve ID'sini döndürür."""
     try:
-        with open(products_file, "r") as f:
-            lines = f.readlines()
-            if lines:
-                last_line = lines[-1]
-                last_item_id = int(last_line.split(" = ")[0])
-                return last_item_id
+        config = configparser.ConfigParser()
+        config.read(products_file)
+        if not config.has_section("PRODUCTS"):
             return 0
+        ids = [int(k) for k, _ in config.items("PRODUCTS")]
+        return max(ids) if ids else 0
     except Exception as e:
         logging.error(f"Error reading the last item ID: {e}")
         return 0
-
 # Ana menü oluşturma fonksiyonu
 def main_menu_keyboard():
     """Ana menü oluşturur."""
@@ -232,16 +229,41 @@ async def add_item(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     logging.info(f"Product {name} added by user {update.message.from_user.id}")
 
 async def remove_item(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """/remove_item {ID} komutunu işler."""
+    """Kullanıcının belirttiği ID'deki ürünü siler."""
     input_text = update.message.text
     logging.info(f"Remove item command received from user {update.message.from_user.id}: {input_text}")
 
     try:
         item_id = int(input_text[len("/remove_item"):].strip())
     except ValueError:
-        await update.message.reply_text("Invalid ID format.")
-        logging.warning(f"Invalid ID format provided by user {update.message.from_user.id}: {input_text}")
+        await update.message.reply_text("❗ Geçersiz ID formatı. Örnek kullanım: /remove_item 2")
+        logging.warning(f"Invalid ID format provided: {input_text}")
         return
+
+    # Dosyayı oku
+    config = configparser.ConfigParser()
+    if not os.path.exists(PRODUCTS_FILE):
+        await update.message.reply_text("🛑 Ürün listesi bulunamadı.")
+        return
+
+    config.read(PRODUCTS_FILE)
+
+    if not config.has_section("PRODUCTS") or str(item_id) not in config["PRODUCTS"]:
+        await update.message.reply_text(f"❌ {item_id} numaralı ürün bulunamadı.")
+        logging.info(f"Item ID {item_id} not found for removal.")
+        return
+
+    config.remove_option("PRODUCTS", str(item_id))
+
+    try:
+        # Dosyayı yeniden yaz
+        with open(PRODUCTS_FILE, "w") as configfile:
+            config.write(configfile)
+        await update.message.reply_text(f"🗑️ {item_id} numaralı ürün başarıyla silindi.")
+        logging.info(f"Item ID {item_id} removed successfully.")
+    except Exception as e:
+        await update.message.reply_text("🛑 Ürün silinirken bir hata oluştu.")
+        logging.error(f"Error removing item ID {item_id}: {e}")
 
     # Silme işlemini gerçekleştirme
     # Bu fonksiyon ürün silme işlemi için yazılabilir.
@@ -252,6 +274,9 @@ def main():
 
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("help", help_command))
+    application.add_handler(CommandHandler("add_item", add_item))
+    application.add_handler(CommandHandler("remove_item", remove_item))
+    application.add_handler(CommandHandler("read_items", read_items))
     application.add_handler(CallbackQueryHandler(button))
 
     application.run_polling()
