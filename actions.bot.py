@@ -8,6 +8,10 @@ from telegram.ext import (
     Application, CommandHandler, ContextTypes, MessageHandler, CallbackQueryHandler, filters
 )
 import aiofiles
+import requests
+from bs4 import BeautifulSoup
+from filelock import FileLock
+
 
 # Loglama yapılandırması
 logging.basicConfig(
@@ -74,36 +78,45 @@ def read_value(input: str):
     return input[len("/add_item"):comma_index].strip(), input[comma_index + 1:].strip()
 
 async def write_product_to_file(item_id: int, name: str, url: str) -> None:
+    lock = FileLock(PRODUCTS_FILE + ".lock")
     config = configparser.ConfigParser()
-    if os.path.exists(PRODUCTS_FILE):
-        config.read(PRODUCTS_FILE)
 
-    if not config.has_section("PRODUCTS"):
-        config.add_section("PRODUCTS")
-
-    #config.set("PRODUCTS", str(item_id), f"{name},$0,{url}")
-    config.set("PRODUCTS", str(item_id), f"{name},0,{url}")
     try:
-        async with aiofiles.open(PRODUCTS_FILE, "w") as file:
-            await file.write("")  # dosyayı temizle
-        with open(PRODUCTS_FILE, "w") as f:
-            config.write(f)
-        logging.info(f"Added new product: {name}, URL: {url}")
+        with lock:  # ✅ Doğru kullanım
+            if os.path.exists(PRODUCTS_FILE):
+                config.read(PRODUCTS_FILE)
+
+            if not config.has_section("PRODUCTS"):
+                config.add_section("PRODUCTS")
+
+            config.set("PRODUCTS", str(item_id), f"{name},0,{url}")
+
+            with open(PRODUCTS_FILE, "w") as f:
+                config.write(f)
+
+            logging.info(f"Added new product: {name}, URL: {url}")
     except Exception as e:
         logging.error(f"Error writing to file: {e}")
 
 async def read_products() -> str:
-    """Ürünleri dosyadan okur ve döndürür."""
+    lock = FileLock(PRODUCTS_FILE + ".lock")
     product_reader = configparser.RawConfigParser()
-    if not os.path.exists(PRODUCTS_FILE):
-        logging.warning("No products file found.")
-        return "No products file found."
-    product_reader.read(PRODUCTS_FILE)
-    if not product_reader.has_section("PRODUCTS"):
-        logging.warning("No items found in products file.")
-        return "No items found."
-    products = product_reader.items("PRODUCTS")
-    return "\n".join(f"Item {key}: {value}" for key, value in products)
+
+    try:
+        with lock:  # ❗ async with değil, sadece with kullanıyoruz
+            if not os.path.exists(PRODUCTS_FILE):
+                return "🛑 Ürün listesi bulunamadı."
+
+            product_reader.read(PRODUCTS_FILE)
+            if not product_reader.has_section("PRODUCTS"):
+                return "📭 Hiç ürün bulunamadı."
+
+            products = product_reader.items("PRODUCTS")
+            return "\n".join(f"Item {key}: {value}" for key, value in products)
+
+    except Exception as e:
+        logging.error(f"Error reading products: {e}")
+        return "🚫 Ürünler okunurken bir hata oluştu."
 
 def get_last_item(products_file: str) -> int:
     try:
@@ -215,30 +228,54 @@ async def read_items(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
     items = await read_products()  # Ürünleri okuma fonksiyonu burada çağrılacak
     await query.edit_message_text(items)  # Yanıtı callback query üzerine gönderiyoruz.
 
+
 async def add_item(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """/add_item {name},{url} komutunu işler."""
+    """Kullanıcı bir Amazon linki ve ürün adı girerek ürünü ekler."""
     input_text = update.message.text
     logging.info(f"Add item command received from user {update.message.from_user.id}: {input_text}")
 
-    if not validate_input(input_text):
-        await update.message.reply_text("Invalid input format. Use /add_item NAME,URL")
-        logging.warning(f"Invalid input format from user {update.message.from_user.id}: {input_text}")
+    # "/add_item" komutundan sonra gelen kısmı ayırıyoruz (item adı ve URL)
+    if input_text.startswith("/add_item "):
+        input_text = input_text[len("/add_item "):].strip()
+
+    # Virgülle ayırarak item adı ve URL'yi alıyoruz
+    comma_index = input_text.find(",")
+    if comma_index == -1:
+        await update.message.reply_text("❗ Lütfen ürün adını ve URL'yi virgülle ayırarak girin. Örnek: /add_item ITEM NAME, https://amazon.com/...")
+        logging.warning(f"Invalid input format (missing comma): {input_text}")
         return
 
-    name, url = read_value(input_text)
-    if not is_valid_url(url):
-        await update.message.reply_text("Invalid URL provided.")
+    # Ürün adını ve URL'yi al
+    item_name = input_text[:comma_index].strip()
+    url = input_text[comma_index + 1:].strip()
+
+    # Amazon URL'si olup olmadığını kontrol et
+    if not any(url.startswith(domain) for domain in
+               ["https://www.amazon.com/", "https://amzn.eu/", "https://www.amazon.com.tr/"]):
+        await update.message.reply_text("❗ Lütfen geçerli bir Amazon ürün linki gönderin.")
         logging.warning(f"Invalid URL provided by user {update.message.from_user.id}: {url}")
         return
 
+    # URL geçerli ise, ürünü ekleyelim
     last_item_id = get_last_item(PRODUCTS_FILE)
     new_item_id = last_item_id + 1
-    await write_product_to_file(new_item_id, name, url)
-    await update.message.reply_text(f"Product {name} added successfully with ID: {new_item_id}")
-    logging.info(f"Product {name} added by user {update.message.from_user.id}")
+    await write_product_to_file(new_item_id, item_name, url)
+
+    await update.message.reply_text(f"✅ Ürün '{item_name}' başarıyla eklendi. ID: {new_item_id}")
+    logging.info(f"Product '{item_name}' added by user {update.message.from_user.id}")
+
+def validate_input(input: str) -> bool:
+    """'/add_item ITEM NAME, URL' formatında girişin geçerliliğini kontrol eder."""
+    if not input or not input.startswith("/add_item"):
+        logging.warning(f"Invalid input format: {input}")
+        return False
+    comma_index = input.find(",")
+    if comma_index == -1:
+        logging.warning(f"Invalid input format (missing comma): {input}")
+        return False
+    return True
 
 async def remove_item(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Kullanıcının belirttiği ID'deki ürünü siler."""
     input_text = update.message.text
     logging.info(f"Remove item command received from user {update.message.from_user.id}: {input_text}")
 
@@ -246,30 +283,30 @@ async def remove_item(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
         item_id = int(input_text[len("/remove_item"):].strip())
     except ValueError:
         await update.message.reply_text("❗ Geçersiz ID formatı. Örnek kullanım: /remove_item 2")
-        logging.warning(f"Invalid ID format provided: {input_text}")
         return
 
-    # Dosyayı oku
-    config = configparser.ConfigParser()
-    if not os.path.exists(PRODUCTS_FILE):
-        await update.message.reply_text("🛑 Ürün listesi bulunamadı.")
-        return
-
-    config.read(PRODUCTS_FILE)
-
-    if not config.has_section("PRODUCTS") or str(item_id) not in config["PRODUCTS"]:
-        await update.message.reply_text(f"❌ {item_id} numaralı ürün bulunamadı.")
-        logging.info(f"Item ID {item_id} not found for removal.")
-        return
-
-    config.remove_option("PRODUCTS", str(item_id))
+    lock = FileLock(PRODUCTS_FILE + ".lock")
 
     try:
-        # Dosyayı yeniden yaz
-        with open(PRODUCTS_FILE, "w") as configfile:
-            config.write(configfile)
-        await update.message.reply_text(f"🗑️ {item_id} numaralı ürün başarıyla silindi.")
-        logging.info(f"Item ID {item_id} removed successfully.")
+        with lock:  # ✅ Doğru kullanım
+            config = configparser.ConfigParser()
+            if not os.path.exists(PRODUCTS_FILE):
+                await update.message.reply_text("🛑 Ürün listesi bulunamadı.")
+                return
+
+            config.read(PRODUCTS_FILE)
+
+            if not config.has_section("PRODUCTS") or str(item_id) not in config["PRODUCTS"]:
+                await update.message.reply_text(f"❌ {item_id} numaralı ürün bulunamadı.")
+                return
+
+            config.remove_option("PRODUCTS", str(item_id))
+
+            with open(PRODUCTS_FILE, "w") as configfile:
+                config.write(configfile)
+
+            await update.message.reply_text(f"🗑️ {item_id} numaralı ürün başarıyla silindi.")
+            logging.info(f"Item ID {item_id} removed successfully.")
     except Exception as e:
         await update.message.reply_text("🛑 Ürün silinirken bir hata oluştu.")
         logging.error(f"Error removing item ID {item_id}: {e}")

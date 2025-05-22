@@ -9,10 +9,12 @@ import requests
 import traceback
 import logging
 import os
+import random
+from filelock import FileLock
 
 #PARAMS
-SLEEP_TIME=0.5 #between attemps to fetch the price
-RUN_EVERY=30 #seconds = 0.5 minutes
+SLEEP_TIME=random.uniform(1, 2.5) #between attemps to fetch the price
+RUN_EVERY=random.uniform(45, 60) #seconds = 0.5 minutes
 PRODUCTS_FILE= 'C:\\Users\\Harun\\PycharmProjects\\amazonpricealertTelegramBot\\products.ini'
 CONFIG_FILE = 'C:\\Users\\Harun\\PycharmProjects\\amazonpricealertTelegramBot\\config.ini'
 PRICE_DIFFERENCE=1 #1 dollar, min price difference to notify
@@ -62,8 +64,14 @@ def get_price_name(name, url):
     #print(url)
     logging.info(f"Fetching price for: {url}")
 
+    USER_AGENTS = [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15",
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Gecko/20100101 Firefox/125.0",
+    ]
     HEADERS = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'User-Agent': random.choice(USER_AGENTS),
         'Accept-Language': 'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7',
     }
 
@@ -83,7 +91,7 @@ def get_price_name(name, url):
         #print(name)
         logging.info(f"Product Name: {name}")
 
-    if "amazon" or "amzn" in url:
+    if "amazon" in url or "amzn" in url:
         title = soup.find("span", class_="a-size-medium a-color-success")
         if title and "şu anda mevcut değil" in title.text.lower():
             #print("Currently unavailable")
@@ -99,6 +107,10 @@ def get_price_name(name, url):
                                attrs={"class": "a-price aok-align-center reinventPricePriceToPayMargin priceToPay"})
 
         if price_span is None:
+            # HTML çıktısını hata ayıklama için kaydet
+           # with open(f"debug_{name[:10].replace(' ', '_')}.html", "w", encoding="utf-8") as f:
+            #    f.write(str(soup.prettify()))
+            logging.error(f"Price span not found. Saved HTML for inspection: debug_{name[:10]}.html")
             return "-1", name
 
         price_whole = price_span.find("span", class_="a-price-whole")
@@ -155,89 +167,80 @@ async def send_telegram_notification(item, previous_price, current_price, url):
 
 async def check_price_change(id, name, previous_price, url):
     products_file = configparser.RawConfigParser()
-    products_file.read(PRODUCTS_FILE)
+    lock = FileLock(PRODUCTS_FILE + ".lock")  # <--- Dosya kilidi oluştur
 
     try:
         current_price, name_new = get_price_name(name, url)
 
         if current_price.strip() != "" and not current_price.isspace():
-                current_price = float(current_price)
-                if current_price == -1:
-                    #print("Error with price")
-                    logging.error("Error with price")
-                    return False
-                if len(name)==0:
-                    #print("Name updated from ", name, "to: ", name_new)
+            current_price = float(current_price)
+
+            if current_price == -1:
+                logging.error("Error with price")
+                return False
+
+            with lock:
+                products_file.read(PRODUCTS_FILE)
+
+                if len(name) == 0:
                     logging.info(f"Name updated from {name} to: {name_new}")
-                    #products_file.set('PRODUCTS', id,f'{name_new},${current_price},{url}')
                     products_file.set('PRODUCTS', id, f'{name_new},{current_price},{url}')
                     with open(PRODUCTS_FILE, 'w') as productsFile:
                         products_file.write(productsFile)
 
                 if current_price != previous_price:
                     if abs(current_price - previous_price) >= PRICE_DIFFERENCE:
-                        #print("Price has changed for", name_new)
-                        #print("Previous price: ", previous_price)
-                        #print("Current price: ", current_price)
                         logging.info(f"Price has changed for {name_new}")
                         logging.info(f"Previous price: {previous_price}")
                         logging.info(f"Current price: {current_price}")
 
-                        # Send notification to Telegram
                         await send_telegram_notification(name_new, previous_price, current_price, url)
-                    # Update the price in the config file
-                    #print("Price changed but not more than ", PRICE_DIFFERENCE)
+
                     logging.info(f"Price changed but not more than {PRICE_DIFFERENCE}")
-                    #products_file.set('PRODUCTS', id,f'{name_new},${current_price},{url}')
                     products_file.set('PRODUCTS', id, f'{name_new},{current_price},{url}')
                     with open(PRODUCTS_FILE, 'w') as productsFile:
                         products_file.write(productsFile)
-
                 else:
-                    #print("Price has not changed. Still ", current_price)
                     logging.info(f"Price has not changed. Still {current_price}")
 
-
-                return True
+            return True
         else:
-            #print("Current price is empty or whitespace.")
             logging.warning(f"Current price is empty or whitespace for {name}")
             return False
+
     except ValueError as exc:
-        #print("Invalid current price format.", exc)
         logging.error(f"Invalid current price format: {exc}")
     except requests.exceptions.HTTPError as err:
-        #print("Error occurred during the request:", err)
         logging.error(f"Error occurred during the request: {err}")
         return False
 
 async def main():
-
-    products_file = configparser.RawConfigParser()
-
     while True:
-        # Read product information from config file
-        products_file.read(PRODUCTS_FILE)
-        products = products_file.items('PRODUCTS')
+        lock = FileLock(PRODUCTS_FILE + ".lock")
+        products_file = configparser.RawConfigParser()
+
+        with lock:
+            products_file.read(PRODUCTS_FILE)
+            products = products_file.items('PRODUCTS')
 
         for id, info in products:
-            name, price, url = info.split(',')
-            #price=float(price.replace('$', ''))
-            price = float(price.replace('₺', '').replace('$', ''))
+            try:
+                name, price, url = info.split(',')
+                price = float(price.replace('₺', '').replace('$', ''))
+            except ValueError:
+                logging.warning(f"Invalid product entry for ID {id}: {info}")
+                continue
 
-            #while True:
-            # Yeni: başarısız denemelerde sadece 1-2 kere dene
-            retry_limit = MAX_PRICE_RETRIES if "amazon.com.tr" not in url else 2
+            retry_limit = MAX_PRICE_RETRIES if "amazon" not in url else 2
             for _ in range(retry_limit):
                 status = await check_price_change(id, name, price, url)
                 if status:
                     break
-                #print(".")
                 logging.info("Retrying...")
-                time.sleep(SLEEP_TIME)
-        #print("Waiting ", RUN_EVERY)
-        logging.info(f"Waiting for {RUN_EVERY} seconds before checking again.")
-        time.sleep(RUN_EVERY)
+                await asyncio.sleep(SLEEP_TIME)
+
+        logging.info(f"Waiting for {RUN_EVERY:.2f} seconds before checking again.")
+        await asyncio.sleep(RUN_EVERY)
 
 # Run the main function
 asyncio.run(main())
