@@ -165742,3 +165742,25 @@
 2025-05-26 07:39:24,429 - INFO - Retrying...
 2025-05-26 07:39:26,655 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
 2025-05-26 07:39:26,655 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 07:39:27,328 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1 HTTP/1.1" 200 None
+2025-05-26 07:39:32,315 - INFO - Available!
+2025-05-26 07:39:32,319 - ERROR - Price span not found. Saved HTML for inspection: debug_Bosch Prof.html
+2025-05-26 07:39:32,320 - ERROR - Error with price
+2025-05-26 07:39:32,320 - INFO - Retrying...
+2025-05-26 07:39:34,555 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CBFZYL3S/ref=ox_sc_saved_image_3?smid=A1UNQM1SR2CHM&psc=1
+2025-05-26 07:39:34,557 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 07:39:35,614 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B0CBFZYL3S/ref=ox_sc_saved_image_3?smid=A1UNQM1SR2CHM&psc=1 HTTP/1.1" 200 None
+2025-05-26 07:39:38,768 - INFO - Available!
+2025-05-26 07:39:38,771 - DEBUG - DB lowest_price for ID 6: (4169.0,)
+2025-05-26 07:39:38,771 - INFO - Lowest price remains unchanged for BOSCH GSR 185: 4169.0
+2025-05-26 07:39:38,771 - INFO - Price has not changed. Still 4169.0
+2025-05-26 07:39:38,771 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B083HCMC84?ref=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&ref_=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&social_share=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&previewDoh=1
+2025-05-26 07:39:38,772 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 07:39:39,418 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B083HCMC84?ref=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&ref_=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&social_share=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&previewDoh=1 HTTP/1.1" 200 None
+2025-05-26 07:39:44,036 - INFO - Available!
+2025-05-26 07:39:44,040 - DEBUG - DB lowest_price for ID 7: (783.89,)
+2025-05-26 07:39:44,040 - INFO - Lowest price remains unchanged for BOSCH SDS Kirici Uc: 783.89
+2025-05-26 07:39:44,040 - INFO - Price has not changed. Still 783.89
+2025-05-26 07:39:44,040 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B016DLN0Z6/?coliid=I20CNFSPSE49XT&colid=23A34QHGOQ5YA&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it
+2025-05-26 07:39:44,041 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 07:39:44,798 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B016DLN0Z6/?coliid=I20CNFSPSE49XT&colid=23A34QHGOQ5YA&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it HTTP/1.1" 200 None
