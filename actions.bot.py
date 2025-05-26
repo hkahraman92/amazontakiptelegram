@@ -11,7 +11,7 @@ import aiofiles
 import requests
 from bs4 import BeautifulSoup
 from filelock import FileLock
-
+import sqlite3
 
 # Loglama yapılandırması
 logging.basicConfig(
@@ -51,6 +51,32 @@ if tuple(map(int, TG_VER.split('.'))) < (20, 0):
         f"This script is not compatible with your current PTB version {TG_VER}. Ensure you have at least PTB v20.")
 
 # --- Yardımcı Fonksiyonlar --- #
+
+def init_db():
+    conn = sqlite3.connect("products.db")
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS products (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            url TEXT NOT NULL,
+            price REAL DEFAULT 0,
+            lowest_price REAL DEFAULT 0
+        )
+    ''')
+    conn.commit()
+    conn.close()
+
+async def insert_product_to_db(name: str, url: str, price: float = 0) -> int:
+    conn = sqlite3.connect("products.db")
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO products (name, url, price, lowest_price) VALUES (?, ?, ?, ?)",
+                   (name, url, price, price))
+    conn.commit()
+    item_id = cursor.lastrowid
+    conn.close()
+    logging.info(f"Product inserted: {name}, URL: {url}, ID: {item_id}, Price: {price}")
+    return item_id
 
 def is_valid_url(url: str) -> bool:
     """URL geçerliliğini kontrol eder."""
@@ -99,37 +125,38 @@ async def write_product_to_file(item_id: int, name: str, url: str) -> None:
         logging.error(f"Error writing to file: {e}")
 
 async def read_products() -> str:
-    lock = FileLock(PRODUCTS_FILE + ".lock")
-    product_reader = configparser.RawConfigParser()
-
     try:
-        with lock:  # ❗ async with değil, sadece with kullanıyoruz
-            if not os.path.exists(PRODUCTS_FILE):
-                return "🛑 Ürün listesi bulunamadı."
+        conn = sqlite3.connect("products.db")
+        cursor = conn.cursor()
+        cursor.execute("SELECT id, name, url, price, lowest_price FROM products")
+        products = cursor.fetchall()
+        conn.close()
 
-            product_reader.read(PRODUCTS_FILE)
-            if not product_reader.has_section("PRODUCTS"):
-                return "📭 Hiç ürün bulunamadı."
+        if not products:
+            return "📭 Hiç ürün bulunamadı."
 
-            products = product_reader.items("PRODUCTS")
-            return "\n".join(f"Item {key}: {value}" for key, value in products)
+        # ID, isim, URL, son fiyat ve en düşük fiyatı göster
+        return "\n\n".join([
+            f"ID {pid}: {name}\nURL: {url}\nSon Fiyat: {price}₺\nEn Düşük Fiyat: {lowest_price}₺"
+            for pid, name, url, price, lowest_price in products
+        ])
 
     except Exception as e:
-        logging.error(f"Error reading products: {e}")
+        logging.error(f"Error reading products from database: {e}")
         return "🚫 Ürünler okunurken bir hata oluştu."
 
-def get_last_item(products_file: str) -> int:
-    try:
-        config = configparser.ConfigParser()
-        config.read(products_file)
-        if not config.has_section("PRODUCTS"):
-            return 0
-        ids = [int(k) for k, _ in config.items("PRODUCTS")]
-        return max(ids) if ids else 0
-    except Exception as e:
-        logging.error(f"Error reading the last item ID: {e}")
-        return 0
-# Ana menü oluşturma fonksiyonu
+# def get_last_item(products_file: str) -> int:
+#     try:
+#         config = configparser.ConfigParser()
+#         config.read(products_file)
+#         if not config.has_section("PRODUCTS"):
+#             return 0
+#         ids = [int(k) for k, _ in config.items("PRODUCTS")]
+#         return max(ids) if ids else 0
+#     except Exception as e:
+#         logging.error(f"Error reading the last item ID: {e}")
+#         return 0
+# # Ana menü oluşturma fonksiyonu
 def main_menu_keyboard():
     """Ana menü oluşturur."""
     keyboard = [
@@ -217,6 +244,31 @@ def help_menu_keyboard():
     ]
     return InlineKeyboardMarkup(keyboard)
 
+def update_price(product_id: int, new_price: float):
+    conn = sqlite3.connect("products.db")
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT lowest_price FROM products WHERE id = ?", (product_id,))
+    row = cursor.fetchone()
+
+    if row is None:
+        conn.close()
+        return
+
+    current_lowest = row[0]
+
+    # Eğer mevcut en düşük fiyat 0'sa ya da yeni fiyat ondan düşükse güncelle
+    if current_lowest == 0 or (new_price > 0 and new_price < current_lowest):
+        lowest_price = new_price
+    else:
+        lowest_price = current_lowest
+
+    cursor.execute("""
+        UPDATE products SET price = ?, lowest_price = ? WHERE id = ?
+    """, (new_price, lowest_price, product_id))
+    conn.commit()
+    conn.close()
+
 async def read_items(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Ürünleri okur ve görüntüler."""
     query = update.callback_query  # CallbackQuery nesnesini kullanıyoruz.
@@ -258,7 +310,8 @@ async def add_item(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
     # URL geçerli ise, ürünü ekleyelim
     last_item_id = get_last_item(PRODUCTS_FILE)
-    new_item_id = last_item_id + 1
+    #new_item_id = last_item_id + 1
+    new_item_id = await insert_product_to_db(item_name, url, price=0)
     await write_product_to_file(new_item_id, item_name, url)
 
     await update.message.reply_text(f"✅ Ürün '{item_name}' başarıyla eklendi. ID: {new_item_id}")
@@ -276,46 +329,32 @@ def validate_input(input: str) -> bool:
     return True
 
 async def remove_item(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    input_text = update.message.text
-    logging.info(f"Remove item command received from user {update.message.from_user.id}: {input_text}")
-
+    input_text = update.message.text.strip()
     try:
         item_id = int(input_text[len("/remove_item"):].strip())
     except ValueError:
-        await update.message.reply_text("❗ Geçersiz ID formatı. Örnek kullanım: /remove_item 2")
+        await update.message.reply_text("❗ Geçersiz ID formatı. Örnek: /remove_item 2")
         return
 
-    lock = FileLock(PRODUCTS_FILE + ".lock")
-
     try:
-        with lock:  # ✅ Doğru kullanım
-            config = configparser.ConfigParser()
-            if not os.path.exists(PRODUCTS_FILE):
-                await update.message.reply_text("🛑 Ürün listesi bulunamadı.")
-                return
+        conn = sqlite3.connect("products.db")
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM products WHERE id = ?", (item_id,))
+        conn.commit()
+        affected_rows = cursor.rowcount
+        conn.close()
 
-            config.read(PRODUCTS_FILE)
-
-            if not config.has_section("PRODUCTS") or str(item_id) not in config["PRODUCTS"]:
-                await update.message.reply_text(f"❌ {item_id} numaralı ürün bulunamadı.")
-                return
-
-            config.remove_option("PRODUCTS", str(item_id))
-
-            with open(PRODUCTS_FILE, "w") as configfile:
-                config.write(configfile)
-
-            await update.message.reply_text(f"🗑️ {item_id} numaralı ürün başarıyla silindi.")
-            logging.info(f"Item ID {item_id} removed successfully.")
+        if affected_rows == 0:
+            await update.message.reply_text("❌ Bu ID'ye sahip bir ürün bulunamadı.")
+        else:
+            await update.message.reply_text(f"🗑️ {item_id} numaralı ürün silindi.")
     except Exception as e:
-        await update.message.reply_text("🛑 Ürün silinirken bir hata oluştu.")
-        logging.error(f"Error removing item ID {item_id}: {e}")
-
-    # Silme işlemini gerçekleştirme
-    # Bu fonksiyon ürün silme işlemi için yazılabilir.
+        logging.error(f"Veritabanından silinirken hata: {e}")
+        await update.message.reply_text("🛑 Veritabanı hatası.")
 
 def main():
     """Botu başlatır ve handler'ları ekler."""
+    init_db()
     application = Application.builder().token(TELEGRAM_TOKEN).build()
 
     application.add_handler(CommandHandler("start", start))

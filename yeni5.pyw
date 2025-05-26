@@ -1,0 +1,91 @@
+curl 'http://192.170.60.105/RPC2' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
+  -H 'Cookie: VSLangCookie30=English; username=admin; showIVSRule=false; VSVideoWHMode=Adaptive%20Window; VSWebClientSessionID=63444948' \
+  -H 'Origin: http://192.170.60.105' \
+  -H 'Referer: http://192.170.60.105/' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --data-raw '{"method":"ptz.lensInit","params":null,"id":137,"session":63444948,"object":60982176}' \
+  --compressed \
+  --insecure ;
+curl 'http://192.170.60.105/RPC2' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
+  -H 'Cookie: VSLangCookie30=English; username=admin; showIVSRule=false; VSVideoWHMode=Adaptive%20Window; VSWebClientSessionID=63444948' \
+  -H 'Origin: http://192.170.60.105' \
+  -H 'Referer: http://192.170.60.105/' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --data-raw '{"method":"global.keepAlive","params":{"timeout":300},"id":138,"session":63444948}' \
+  --compressed \
+  --insecure ;
+curl 'http://192.170.60.105/RPC2' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
+  -H 'Cookie: VSLangCookie30=English; username=admin; showIVSRule=false; VSVideoWHMode=Adaptive%20Window; VSWebClientSessionID=63444948' \
+  -H 'Origin: http://192.170.60.105' \
+  -H 'Referer: http://192.170.60.105/' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --data-raw '{"method":"global.keepAlive","params":{"timeout":300},"id":139,"session":63444948}' \
+  --compressed \
+  --insecure ;
+curl 'http://192.170.60.105/RPC2' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
+  -H 'Cookie: VSLangCookie30=English; username=admin; showIVSRule=false; VSVideoWHMode=Adaptive%20Window; VSWebClientSessionID=63444948' \
+  -H 'Origin: http://192.170.60.105' \
+  -H 'Referer: http://192.170.60.105/' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --data-raw '{"method":"global.keepAlive","params":{"timeout":300},"id":140,"session":63444948}' \
+  --compressed \
+  --insecure ;
+curl 'http://192.170.60.105/RPC2' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
+  -H 'Cookie: VSLangCookie30=English; username=admin; showIVSRule=false; VSVideoWHMode=Adaptive%20Window; VSWebClientSessionID=63444948' \
+  -H 'Origin: http://192.170.60.105' \
+  -H 'Referer: http://192.170.60.105/' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --data-raw '{"method":"global.keepAlive","params":{"timeout":300},"id":141,"session":63444948}' \
+  --compressed \
+  --insecure ;
+curl 'http://192.170.60.105/RPC2' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
+  -H 'Cookie: VSLangCookie30=English; username=admin; showIVSRule=false; VSVideoWHMode=Adaptive%20Window; VSWebClientSessionID=63444948' \
+  -H 'Origin: http://192.170.60.105' \
+  -H 'Referer: http://192.170.60.105/' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --data-raw '{"method":"global.keepAlive","params":{"timeout":300},"id":142,"session":63444948}' \
+  --compressed \
+  --insecure ;
+curl 'http://192.170.60.105/RPC2' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
+  -H 'Cookie: VSLangCookie30=English; username=admin; showIVSRule=false; VSVideoWHMode=Adaptive%20Window; VSWebClientSessionID=63444948' \
+  -H 'Origin: http://192.170.60.105' \
+  -H 'Referer: http://192.170.60.105/' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --data-raw '{"method":"global.keepAlive","params":{"timeout":300},"id":143,"session":63444948}' \
+  --compressed \
+  --insecure

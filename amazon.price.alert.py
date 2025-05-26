@@ -11,6 +11,7 @@ import logging
 import os
 import random
 from filelock import FileLock
+import sqlite3
 
 #PARAMS
 SLEEP_TIME=random.uniform(1, 2.5) #between attemps to fetch the price
@@ -25,7 +26,7 @@ logging.basicConfig(
     filename='C:\\Users\\Harun\\PycharmProjects\\amazonpricealertTelegramBot\\amazon_price_alert.log',
     filemode='a',
     format='%(asctime)s - %(levelname)s - %(message)s',
-    level=logging.INFO
+    level=logging.DEBUG  # INFO yerine DEBUG yaptım
 )
 
 
@@ -37,6 +38,26 @@ TELEGRAM_TOKEN = config.get('TELEGRAM', 'TELEGRAM_TOKEN')
 CHAT_ID = config.get('TELEGRAM', 'CHAT_ID')
 apiURL = f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage'
 
+def init_db():
+    try:
+        conn = sqlite3.connect('products.db')
+        cursor = conn.cursor()
+
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS products (
+                id TEXT PRIMARY KEY,
+                name TEXT,
+                price REAL,
+                lowest_price REAL,
+                url TEXT
+            )
+        ''')
+
+        conn.commit()
+        conn.close()
+        logging.info("Database initialized and table 'products' checked/created successfully.")
+    except Exception as e:
+        logging.error(f"Error initializing database: {e}")
 def get_name(soup, url):
     try:
         title = ""
@@ -166,9 +187,6 @@ async def send_telegram_notification(item, previous_price, current_price, url):
         traceback.print_exc()
 
 async def check_price_change(id, name, previous_price, url):
-    products_file = configparser.RawConfigParser()
-    lock = FileLock(PRODUCTS_FILE + ".lock")  # <--- Dosya kilidi oluştur
-
     try:
         current_price, name_new = get_price_name(name, url)
 
@@ -179,30 +197,33 @@ async def check_price_change(id, name, previous_price, url):
                 logging.error("Error with price")
                 return False
 
-            with lock:
-                products_file.read(PRODUCTS_FILE)
+            # Veritabanından mevcut lowest_price değerini al
+            conn = sqlite3.connect('products.db')
+            cursor = conn.cursor()
+            cursor.execute('SELECT lowest_price FROM products WHERE id = ?', (id,))
+            row = cursor.fetchone()
+            conn.close()
 
-                if len(name) == 0:
-                    logging.info(f"Name updated from {name} to: {name_new}")
-                    products_file.set('PRODUCTS', id, f'{name_new},{current_price},{url}')
-                    with open(PRODUCTS_FILE, 'w') as productsFile:
-                        products_file.write(productsFile)
+            logging.debug(f"DB lowest_price for ID {id}: {row}")
 
-                if current_price != previous_price:
-                    if abs(current_price - previous_price) >= PRICE_DIFFERENCE:
-                        logging.info(f"Price has changed for {name_new}")
-                        logging.info(f"Previous price: {previous_price}")
-                        logging.info(f"Current price: {current_price}")
+            if row is None or row[0] is None or row[0] == 0 or current_price < row[0]:
+                lowest_price = current_price
+                logging.info(f"New lowest price for {name or name_new}: {lowest_price}")
+            else:
+                lowest_price = row[0]
+                logging.info(f"Lowest price remains unchanged for {name or name_new}: {lowest_price}")
 
-                        await send_telegram_notification(name_new, previous_price, current_price, url)
+            if len(name) == 0:
+                logging.info(f"Name updated from '{name}' to: '{name_new}'")
+                update_product(id, name_new, current_price, url, lowest_price)
 
-                    logging.info(f"Price changed but not more than {PRICE_DIFFERENCE}")
-                    products_file.set('PRODUCTS', id, f'{name_new},{current_price},{url}')
-                    with open(PRODUCTS_FILE, 'w') as productsFile:
-                        products_file.write(productsFile)
-                else:
-                    logging.info(f"Price has not changed. Still {current_price}")
-
+            if current_price != previous_price:
+                if abs(current_price - previous_price) >= PRICE_DIFFERENCE:
+                    logging.info(f"Price has changed for {name_new} from {previous_price} to {current_price}")
+                    await send_telegram_notification(name_new, previous_price, current_price, url)
+                update_product(id, name_new, current_price, url, lowest_price)
+            else:
+                logging.info(f"Price has not changed. Still {current_price}")
             return True
         else:
             logging.warning(f"Current price is empty or whitespace for {name}")
@@ -214,23 +235,61 @@ async def check_price_change(id, name, previous_price, url):
         logging.error(f"Error occurred during the request: {err}")
         return False
 
+def get_all_products():
+    conn = sqlite3.connect('products.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT id, name, price, lowest_price, url FROM products')
+    products = cursor.fetchall()
+    conn.close()
+    return products
+
+def update_product(id, name, price, url, lowest_price):
+    try:
+        conn = sqlite3.connect('products.db')
+        cursor = conn.cursor()
+
+        # Önce mevcut lowest_price değerini al
+        cursor.execute('SELECT lowest_price FROM products WHERE id = ?', (id,))
+        row = cursor.fetchone()
+
+        logging.debug(f"Before update: DB lowest_price for ID {id}: {row}")
+
+        if row is None:
+            lowest_price_to_write = price
+            logging.debug(f"No previous lowest_price, setting to current price: {lowest_price_to_write}")
+        else:
+            current_lowest = row[0]
+            if current_lowest is None or current_lowest == 0 or price < current_lowest:
+                lowest_price_to_write = price
+                logging.debug(f"New lowest price detected: {lowest_price_to_write}")
+            else:
+                lowest_price_to_write = current_lowest
+                logging.debug(f"Lowest price unchanged, keeping current lowest: {lowest_price_to_write}")
+
+        cursor.execute('''
+            INSERT INTO products (id, name, price, lowest_price, url) 
+            VALUES (?, ?, ?, ?, ?)
+            ON CONFLICT(id) DO UPDATE SET 
+                name = excluded.name,
+                price = excluded.price,
+                lowest_price = excluded.lowest_price,
+                url = excluded.url
+        ''', (id, name, price, lowest_price, url))
+
+        conn.commit()
+        conn.close()
+        logging.info(f"Product updated/inserted: ID={id}, Name={name}, Price={price}, Lowest Price={lowest_price_to_write}, URL={url}")
+    except Exception as e:
+        logging.error(f"Error updating product (ID={id}): {e}")
+
+
 async def main():
+    init_db()
+
     while True:
-        lock = FileLock(PRODUCTS_FILE + ".lock")
-        products_file = configparser.RawConfigParser()
+        products = get_all_products()
 
-        with lock:
-            products_file.read(PRODUCTS_FILE)
-            products = products_file.items('PRODUCTS')
-
-        for id, info in products:
-            try:
-                name, price, url = info.split(',')
-                price = float(price.replace('₺', '').replace('$', ''))
-            except ValueError:
-                logging.warning(f"Invalid product entry for ID {id}: {info}")
-                continue
-
+        for id, name, price, lowest_price, url in products:
             retry_limit = MAX_PRICE_RETRIES if "amazon" not in url else 2
             for _ in range(retry_limit):
                 status = await check_price_change(id, name, price, url)
@@ -241,6 +300,6 @@ async def main():
 
         logging.info(f"Waiting for {RUN_EVERY:.2f} seconds before checking again.")
         await asyncio.sleep(RUN_EVERY)
-
 # Run the main function
+
 asyncio.run(main())
