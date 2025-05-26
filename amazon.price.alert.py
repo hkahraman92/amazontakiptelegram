@@ -12,6 +12,7 @@ import os
 import random
 from filelock import FileLock
 import sqlite3
+from logging.handlers import TimedRotatingFileHandler
 
 #PARAMS
 SLEEP_TIME=random.uniform(1, 2.5) #between attemps to fetch the price
@@ -21,13 +22,18 @@ CONFIG_FILE = 'C:\\Users\\Harun\\PycharmProjects\\amazonpricealertTelegramBot\\c
 PRICE_DIFFERENCE=1 #1 dollar, min price difference to notify
 MAX_PRICE_RETRIES=30
 
-# Log yapılandırması
-logging.basicConfig(
-    filename='C:\\Users\\Harun\\PycharmProjects\\amazonpricealertTelegramBot\\amazon_price_alert.log',
-    filemode='a',
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    level=logging.DEBUG  # INFO yerine DEBUG yaptım
-)
+# Günlük dönen log ayarı (her gün yenilenir, 30 gün saklanır)
+log_file_path = 'C:\\Users\\Harun\\PycharmProjects\\amazonpricealertTelegramBot\\logs\\amazon_price_alert.log'
+os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
+
+handler = TimedRotatingFileHandler(log_file_path, when='midnight', interval=1, backupCount=30, encoding='utf-8')
+handler.suffix = "%Y-%m-%d"  # Dosya ismine tarih eklensin
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+logger.addHandler(handler)
 
 
 # Read params from config file
@@ -300,6 +306,7 @@ async def main():
 
         logging.info(f"Waiting for {RUN_EVERY:.2f} seconds before checking again.")
         await asyncio.sleep(RUN_EVERY)
+
 # Run the main function
 
 asyncio.run(main())

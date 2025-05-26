@@ -1,0 +1,244 @@
+2025-05-26 08:59:11,466 - DEBUG - Using proactor: IocpProactor
+2025-05-26 08:59:11,468 - INFO - Database initialized and table 'products' checked/created successfully.
+2025-05-26 08:59:11,469 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-26 08:59:11,471 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 08:59:12,129 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1 HTTP/1.1" 200 None
+2025-05-26 08:59:14,575 - INFO - Available!
+2025-05-26 08:59:14,578 - DEBUG - DB lowest_price for ID 1: (24530.97,)
+2025-05-26 08:59:14,578 - INFO - Lowest price remains unchanged for ITEM NAME: 24530.97
+2025-05-26 08:59:14,579 - INFO - Price has not changed. Still 24530.97
+2025-05-26 08:59:14,579 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-26 08:59:14,579 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 08:59:15,106 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1 HTTP/1.1" 200 None
+2025-05-26 08:59:15,108 - INFO - Available!
+2025-05-26 08:59:15,109 - ERROR - Price span not found. Saved HTML for inspection: debug_Columbia C.html
+2025-05-26 08:59:15,109 - ERROR - Error with price
+2025-05-26 08:59:15,109 - INFO - Retrying...
+2025-05-26 08:59:17,208 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-26 08:59:17,209 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 08:59:17,804 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1 HTTP/1.1" 200 None
+2025-05-26 08:59:19,575 - INFO - Available!
+2025-05-26 08:59:19,577 - DEBUG - DB lowest_price for ID 2: (5652.62,)
+2025-05-26 08:59:19,577 - INFO - Lowest price remains unchanged for Columbia COLUMBIA PUFFECT: 5652.62
+2025-05-26 08:59:19,578 - INFO - Price has not changed. Still 5652.62
+2025-05-26 08:59:19,578 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-26 08:59:19,578 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 08:59:20,175 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1 HTTP/1.1" 200 None
+2025-05-26 08:59:22,590 - INFO - Available!
+2025-05-26 08:59:22,593 - DEBUG - DB lowest_price for ID 3: (12990.0,)
+2025-05-26 08:59:22,593 - INFO - Lowest price remains unchanged for Samsonite 75cm: 12990.0
+2025-05-26 08:59:22,593 - INFO - Price has not changed. Still 12990.0
+2025-05-26 08:59:22,593 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-26 08:59:22,594 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 08:59:23,237 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1 HTTP/1.1" 200 None
+2025-05-26 08:59:25,211 - INFO - Available!
+2025-05-26 08:59:25,213 - ERROR - Price span not found. Saved HTML for inspection: debug_Bosch Prof.html
+2025-05-26 08:59:25,214 - ERROR - Error with price
+2025-05-26 08:59:25,215 - INFO - Retrying...
+2025-05-26 08:59:27,326 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-26 08:59:27,327 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 08:59:28,038 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1 HTTP/1.1" 200 None
+2025-05-26 08:59:30,492 - INFO - Available!
+2025-05-26 08:59:30,495 - ERROR - Price span not found. Saved HTML for inspection: debug_Bosch Prof.html
+2025-05-26 08:59:30,496 - ERROR - Error with price
+2025-05-26 08:59:30,496 - INFO - Retrying...
+2025-05-26 08:59:32,600 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CBFZYL3S/ref=ox_sc_saved_image_3?smid=A1UNQM1SR2CHM&psc=1
+2025-05-26 08:59:32,601 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 08:59:33,235 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B0CBFZYL3S/ref=ox_sc_saved_image_3?smid=A1UNQM1SR2CHM&psc=1 HTTP/1.1" 200 None
+2025-05-26 08:59:35,463 - INFO - Available!
+2025-05-26 08:59:35,466 - DEBUG - DB lowest_price for ID 6: (4169.0,)
+2025-05-26 08:59:35,466 - INFO - Lowest price remains unchanged for BOSCH GSR 185: 4169.0
+2025-05-26 08:59:35,466 - INFO - Price has not changed. Still 4169.0
+2025-05-26 08:59:35,466 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B083HCMC84?ref=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&ref_=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&social_share=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&previewDoh=1
+2025-05-26 08:59:35,467 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 08:59:36,134 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B083HCMC84?ref=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&ref_=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&social_share=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&previewDoh=1 HTTP/1.1" 200 None
+2025-05-26 08:59:38,027 - INFO - Available!
+2025-05-26 08:59:38,030 - DEBUG - DB lowest_price for ID 7: (783.89,)
+2025-05-26 08:59:38,030 - INFO - Lowest price remains unchanged for BOSCH SDS Kirici Uc: 783.89
+2025-05-26 08:59:38,030 - INFO - Price has not changed. Still 783.89
+2025-05-26 08:59:38,031 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B016DLN0Z6/?coliid=I20CNFSPSE49XT&colid=23A34QHGOQ5YA&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it
+2025-05-26 08:59:38,031 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 08:59:38,623 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B016DLN0Z6/?coliid=I20CNFSPSE49XT&colid=23A34QHGOQ5YA&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it HTTP/1.1" 200 None
+2025-05-26 08:59:41,099 - INFO - Available!
+2025-05-26 08:59:41,102 - DEBUG - DB lowest_price for ID 8: (14183.14,)
+2025-05-26 08:59:41,102 - INFO - Lowest price remains unchanged for METABO BS18LT: 14183.14
+2025-05-26 08:59:41,102 - INFO - Price has not changed. Still 14183.14
+2025-05-26 08:59:41,102 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CT5RQYCD/ref=ox_sc_saved_image_2?smid=A1UNQM1SR2CHM&th=1&psc=1
+2025-05-26 08:59:41,103 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 08:59:41,681 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B0CT5RQYCD/ref=ox_sc_saved_image_2?smid=A1UNQM1SR2CHM&th=1&psc=1 HTTP/1.1" 200 None
+2025-05-26 08:59:44,496 - INFO - Available!
+2025-05-26 08:59:44,499 - DEBUG - DB lowest_price for ID 10: (2846.9,)
+2025-05-26 08:59:44,499 - INFO - Lowest price remains unchanged for CAMPER Brutus Sandal: 2846.9
+2025-05-26 08:59:44,499 - INFO - Price has not changed. Still 2846.9
+2025-05-26 08:59:44,499 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B0C332C9S4/?coliid=I1JTQ5S6QNPO7D&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-26 08:59:44,500 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 08:59:45,190 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B0C332C9S4/?coliid=I1JTQ5S6QNPO7D&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1 HTTP/1.1" 200 None
+2025-05-26 08:59:49,619 - INFO - Available!
+2025-05-26 08:59:49,622 - DEBUG - DB lowest_price for ID 11: (1295.6,)
+2025-05-26 08:59:49,622 - INFO - Lowest price remains unchanged for SONGMICS Elbise Havalandırma Sistemi: 1295.6
+2025-05-26 08:59:49,622 - INFO - Price has not changed. Still 1295.6
+2025-05-26 08:59:49,622 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B00AYY021E/?coliid=I1KN06MEUKY7MF&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-26 08:59:49,623 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 08:59:50,378 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B00AYY021E/?coliid=I1KN06MEUKY7MF&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1 HTTP/1.1" 200 None
+2025-05-26 08:59:54,124 - INFO - Available!
+2025-05-26 08:59:54,127 - DEBUG - DB lowest_price for ID 12: (2471.24,)
+2025-05-26 08:59:54,127 - INFO - Lowest price remains unchanged for Dymo Label Manager 280P: 2471.24
+2025-05-26 08:59:54,127 - INFO - Price has not changed. Still 2471.24
+2025-05-26 08:59:54,127 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B08DL2NHPL/ref=ox_sc_saved_image_4?smid=A1UNQM1SR2CHM&psc=1
+2025-05-26 08:59:54,128 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 08:59:54,820 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B08DL2NHPL/ref=ox_sc_saved_image_4?smid=A1UNQM1SR2CHM&psc=1 HTTP/1.1" 200 None
+2025-05-26 08:59:58,031 - INFO - Available!
+2025-05-26 08:59:58,034 - DEBUG - DB lowest_price for ID 13: (16782.0,)
+2025-05-26 08:59:58,034 - INFO - Lowest price remains unchanged for Filterqueen Defender Hava Temizleyici: 16782.0
+2025-05-26 08:59:58,034 - INFO - Price has not changed. Still 16782.0
+2025-05-26 08:59:58,034 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B098K3H92Z/ref=ox_sc_saved_title_6?smid=A1UNQM1SR2CHM&psc=1
+2025-05-26 08:59:58,035 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 08:59:58,774 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B098K3H92Z/ref=ox_sc_saved_title_6?smid=A1UNQM1SR2CHM&psc=1 HTTP/1.1" 200 None
+2025-05-26 09:00:01,908 - INFO - Available!
+2025-05-26 09:00:01,911 - DEBUG - DB lowest_price for ID 14: (232.99,)
+2025-05-26 09:00:01,911 - INFO - Lowest price remains unchanged for TP_Link Bluetooth: 232.99
+2025-05-26 09:00:01,912 - INFO - Price has not changed. Still 232.99
+2025-05-26 09:00:01,912 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B00M3SPIQI?ref=cm_sw_r_cso_wa_apin_dp_YTSQA34SYXZPH10C1AMG&ref_=cm_sw_r_cso_wa_apin_dp_YTSQA34SYXZPH10C1AMG&social_share=cm_sw_r_cso_wa_apin_dp_YTSQA34SYXZPH10C1AMG&previewDoh=1
+2025-05-26 09:00:01,912 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:00:02,642 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B00M3SPIQI?ref=cm_sw_r_cso_wa_apin_dp_YTSQA34SYXZPH10C1AMG&ref_=cm_sw_r_cso_wa_apin_dp_YTSQA34SYXZPH10C1AMG&social_share=cm_sw_r_cso_wa_apin_dp_YTSQA34SYXZPH10C1AMG&previewDoh=1 HTTP/1.1" 200 None
+2025-05-26 09:00:04,854 - INFO - Available!
+2025-05-26 09:00:04,857 - DEBUG - DB lowest_price for ID 15: (7863.0,)
+2025-05-26 09:00:04,857 - INFO - Lowest price remains unchanged for SONGMICS Şezlong: 7863.0
+2025-05-26 09:00:04,857 - INFO - Price has not changed. Still 7863.0
+2025-05-26 09:00:04,857 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B0D6RHDY5B?ref=cm_sw_r_cso_cp_apin_dp_4M5335VJYFTS8KVXQSKJ&ref_=cm_sw_r_cso_cp_apin_dp_4M5335VJYFTS8KVXQSKJ&social_share=cm_sw_r_cso_cp_apin_dp_4M5335VJYFTS8KVXQSKJ&previewDoh=1
+2025-05-26 09:00:04,858 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:00:05,514 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B0D6RHDY5B?ref=cm_sw_r_cso_cp_apin_dp_4M5335VJYFTS8KVXQSKJ&ref_=cm_sw_r_cso_cp_apin_dp_4M5335VJYFTS8KVXQSKJ&social_share=cm_sw_r_cso_cp_apin_dp_4M5335VJYFTS8KVXQSKJ&previewDoh=1 HTTP/1.1" 200 None
+2025-05-26 09:00:07,860 - INFO - Available!
+2025-05-26 09:00:07,863 - ERROR - Price span not found. Saved HTML for inspection: debug_Bosch Prof.html
+2025-05-26 09:00:07,864 - ERROR - Error with price
+2025-05-26 09:00:07,864 - INFO - Retrying...
+2025-05-26 09:00:09,977 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B0D6RHDY5B?ref=cm_sw_r_cso_cp_apin_dp_4M5335VJYFTS8KVXQSKJ&ref_=cm_sw_r_cso_cp_apin_dp_4M5335VJYFTS8KVXQSKJ&social_share=cm_sw_r_cso_cp_apin_dp_4M5335VJYFTS8KVXQSKJ&previewDoh=1
+2025-05-26 09:00:09,978 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:00:10,638 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B0D6RHDY5B?ref=cm_sw_r_cso_cp_apin_dp_4M5335VJYFTS8KVXQSKJ&ref_=cm_sw_r_cso_cp_apin_dp_4M5335VJYFTS8KVXQSKJ&social_share=cm_sw_r_cso_cp_apin_dp_4M5335VJYFTS8KVXQSKJ&previewDoh=1 HTTP/1.1" 200 None
+2025-05-26 09:00:12,601 - INFO - Available!
+2025-05-26 09:00:12,603 - ERROR - Price span not found. Saved HTML for inspection: debug_Bosch Prof.html
+2025-05-26 09:00:12,604 - ERROR - Error with price
+2025-05-26 09:00:12,604 - INFO - Retrying...
+2025-05-26 09:00:14,713 - INFO - Waiting for 46.56 seconds before checking again.
+2025-05-26 09:01:01,283 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-26 09:01:01,284 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:01,951 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1 HTTP/1.1" 200 None
+2025-05-26 09:01:01,953 - INFO - Available!
+2025-05-26 09:01:01,953 - ERROR - Price span not found. Saved HTML for inspection: debug_ITEM NAME.html
+2025-05-26 09:01:01,954 - ERROR - Error with price
+2025-05-26 09:01:01,954 - INFO - Retrying...
+2025-05-26 09:01:04,058 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1
+2025-05-26 09:01:04,059 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:04,736 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B0001D1QOK/ref=ox_sc_saved_image_6?smid=A1UNQM1SR2CHM&th=1 HTTP/1.1" 200 None
+2025-05-26 09:01:06,942 - INFO - Available!
+2025-05-26 09:01:06,946 - DEBUG - DB lowest_price for ID 1: (24530.97,)
+2025-05-26 09:01:06,946 - INFO - Lowest price remains unchanged for ITEM NAME: 24530.97
+2025-05-26 09:01:06,946 - INFO - Price has not changed. Still 24530.97
+2025-05-26 09:01:06,946 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-26 09:01:06,947 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:07,460 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1 HTTP/1.1" 200 None
+2025-05-26 09:01:07,462 - INFO - Available!
+2025-05-26 09:01:07,462 - ERROR - Price span not found. Saved HTML for inspection: debug_Columbia C.html
+2025-05-26 09:01:07,463 - ERROR - Error with price
+2025-05-26 09:01:07,463 - INFO - Retrying...
+2025-05-26 09:01:09,573 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1
+2025-05-26 09:01:09,574 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:10,200 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B0CJRQZF8R/ref=ox_sc_act_title_1?smid=A1UNQM1SR2CHM&psc=1 HTTP/1.1" 200 None
+2025-05-26 09:01:11,943 - INFO - Available!
+2025-05-26 09:01:11,946 - DEBUG - DB lowest_price for ID 2: (5652.62,)
+2025-05-26 09:01:11,946 - INFO - Lowest price remains unchanged for Columbia COLUMBIA PUFFECT: 5652.62
+2025-05-26 09:01:11,946 - INFO - Price has not changed. Still 5652.62
+2025-05-26 09:01:11,946 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-26 09:01:11,947 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:12,505 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1 HTTP/1.1" 200 None
+2025-05-26 09:01:12,507 - INFO - Available!
+2025-05-26 09:01:12,507 - ERROR - Price span not found. Saved HTML for inspection: debug_Samsonite .html
+2025-05-26 09:01:12,508 - ERROR - Error with price
+2025-05-26 09:01:12,508 - INFO - Retrying...
+2025-05-26 09:01:14,619 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1
+2025-05-26 09:01:14,620 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:15,463 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B007WQJSZI/?coliid=I11F441CU6YGK1&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1&psc=1 HTTP/1.1" 200 None
+2025-05-26 09:01:17,925 - INFO - Available!
+2025-05-26 09:01:17,928 - DEBUG - DB lowest_price for ID 3: (12990.0,)
+2025-05-26 09:01:17,928 - INFO - Lowest price remains unchanged for Samsonite 75cm: 12990.0
+2025-05-26 09:01:17,928 - INFO - Price has not changed. Still 12990.0
+2025-05-26 09:01:17,928 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-26 09:01:17,929 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:19,238 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1 HTTP/1.1" 200 None
+2025-05-26 09:01:23,354 - INFO - Available!
+2025-05-26 09:01:23,358 - ERROR - Price span not found. Saved HTML for inspection: debug_Bosch Prof.html
+2025-05-26 09:01:23,359 - ERROR - Error with price
+2025-05-26 09:01:23,359 - INFO - Retrying...
+2025-05-26 09:01:25,461 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-26 09:01:25,463 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:26,190 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B007KPQYOE/?coliid=I3TIPTKOWMVM3U&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1 HTTP/1.1" 200 None
+2025-05-26 09:01:28,811 - INFO - Available!
+2025-05-26 09:01:28,814 - ERROR - Price span not found. Saved HTML for inspection: debug_Bosch Prof.html
+2025-05-26 09:01:28,815 - ERROR - Error with price
+2025-05-26 09:01:28,815 - INFO - Retrying...
+2025-05-26 09:01:30,926 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CBFZYL3S/ref=ox_sc_saved_image_3?smid=A1UNQM1SR2CHM&psc=1
+2025-05-26 09:01:30,927 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:31,572 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B0CBFZYL3S/ref=ox_sc_saved_image_3?smid=A1UNQM1SR2CHM&psc=1 HTTP/1.1" 200 None
+2025-05-26 09:01:34,492 - INFO - Available!
+2025-05-26 09:01:34,496 - DEBUG - DB lowest_price for ID 6: (4169.0,)
+2025-05-26 09:01:34,496 - INFO - Lowest price remains unchanged for BOSCH GSR 185: 4169.0
+2025-05-26 09:01:34,496 - INFO - Price has not changed. Still 4169.0
+2025-05-26 09:01:34,496 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B083HCMC84?ref=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&ref_=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&social_share=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&previewDoh=1
+2025-05-26 09:01:34,497 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:35,365 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B083HCMC84?ref=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&ref_=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&social_share=cm_sw_r_cso_cp_apin_dp_Z2M79NV7DSXFMZBQ8H3H&previewDoh=1 HTTP/1.1" 200 None
+2025-05-26 09:01:39,284 - INFO - Available!
+2025-05-26 09:01:39,288 - DEBUG - DB lowest_price for ID 7: (783.89,)
+2025-05-26 09:01:39,288 - INFO - Lowest price remains unchanged for BOSCH SDS Kirici Uc: 783.89
+2025-05-26 09:01:39,288 - INFO - Price has not changed. Still 783.89
+2025-05-26 09:01:39,288 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B016DLN0Z6/?coliid=I20CNFSPSE49XT&colid=23A34QHGOQ5YA&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it
+2025-05-26 09:01:39,289 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:40,096 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B016DLN0Z6/?coliid=I20CNFSPSE49XT&colid=23A34QHGOQ5YA&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it HTTP/1.1" 200 None
+2025-05-26 09:01:43,307 - INFO - Available!
+2025-05-26 09:01:43,310 - DEBUG - DB lowest_price for ID 8: (14183.14,)
+2025-05-26 09:01:43,310 - INFO - Lowest price remains unchanged for METABO BS18LT: 14183.14
+2025-05-26 09:01:43,310 - INFO - Price has not changed. Still 14183.14
+2025-05-26 09:01:43,310 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B0CT5RQYCD/ref=ox_sc_saved_image_2?smid=A1UNQM1SR2CHM&th=1&psc=1
+2025-05-26 09:01:43,311 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:43,967 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B0CT5RQYCD/ref=ox_sc_saved_image_2?smid=A1UNQM1SR2CHM&th=1&psc=1 HTTP/1.1" 200 None
+2025-05-26 09:01:48,778 - INFO - Available!
+2025-05-26 09:01:48,780 - DEBUG - DB lowest_price for ID 10: (2846.9,)
+2025-05-26 09:01:48,780 - INFO - Lowest price remains unchanged for CAMPER Brutus Sandal: 2846.9
+2025-05-26 09:01:48,780 - INFO - Price has not changed. Still 2846.9
+2025-05-26 09:01:48,781 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B0C332C9S4/?coliid=I1JTQ5S6QNPO7D&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-26 09:01:48,781 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:49,425 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B0C332C9S4/?coliid=I1JTQ5S6QNPO7D&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1 HTTP/1.1" 200 None
+2025-05-26 09:01:53,300 - INFO - Available!
+2025-05-26 09:01:53,304 - DEBUG - DB lowest_price for ID 11: (1295.6,)
+2025-05-26 09:01:53,304 - INFO - Lowest price remains unchanged for SONGMICS Elbise Havalandırma Sistemi: 1295.6
+2025-05-26 09:01:53,304 - INFO - Price has not changed. Still 1295.6
+2025-05-26 09:01:53,304 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B00AYY021E/?coliid=I1KN06MEUKY7MF&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-26 09:01:53,305 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:53,918 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B00AYY021E/?coliid=I1KN06MEUKY7MF&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1 HTTP/1.1" 200 None
+2025-05-26 09:01:53,925 - INFO - Available!
+2025-05-26 09:01:53,926 - ERROR - Price span not found. Saved HTML for inspection: debug_Dymo Label.html
+2025-05-26 09:01:53,926 - ERROR - Error with price
+2025-05-26 09:01:53,926 - INFO - Retrying...
+2025-05-26 09:01:56,037 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B00AYY021E/?coliid=I1KN06MEUKY7MF&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
+2025-05-26 09:01:56,038 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:01:56,759 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B00AYY021E/?coliid=I1KN06MEUKY7MF&colid=23A34QHGOQ5YA&ref_=list_c_wl_lv_ov_lig_dp_it&th=1 HTTP/1.1" 200 None
+2025-05-26 09:02:02,147 - INFO - Available!
+2025-05-26 09:02:02,151 - DEBUG - DB lowest_price for ID 12: (2471.24,)
+2025-05-26 09:02:02,151 - INFO - Lowest price remains unchanged for Dymo Label Manager 280P: 2471.24
+2025-05-26 09:02:02,151 - INFO - Price has not changed. Still 2471.24
+2025-05-26 09:02:02,151 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B08DL2NHPL/ref=ox_sc_saved_image_4?smid=A1UNQM1SR2CHM&psc=1
+2025-05-26 09:02:02,152 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:02:03,026 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B08DL2NHPL/ref=ox_sc_saved_image_4?smid=A1UNQM1SR2CHM&psc=1 HTTP/1.1" 200 None
+2025-05-26 09:02:07,686 - INFO - Available!
+2025-05-26 09:02:07,689 - DEBUG - DB lowest_price for ID 13: (16782.0,)
+2025-05-26 09:02:07,690 - INFO - Lowest price remains unchanged for Filterqueen Defender Hava Temizleyici: 16782.0
+2025-05-26 09:02:07,690 - INFO - Price has not changed. Still 16782.0
+2025-05-26 09:02:07,690 - INFO - Fetching price for: https://www.amazon.com.tr/gp/product/B098K3H92Z/ref=ox_sc_saved_title_6?smid=A1UNQM1SR2CHM&psc=1
+2025-05-26 09:02:07,691 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:02:08,371 - DEBUG - https://www.amazon.com.tr:443 "GET /gp/product/B098K3H92Z/ref=ox_sc_saved_title_6?smid=A1UNQM1SR2CHM&psc=1 HTTP/1.1" 200 None
+2025-05-26 09:02:11,682 - INFO - Available!
+2025-05-26 09:02:11,685 - DEBUG - DB lowest_price for ID 14: (232.99,)
+2025-05-26 09:02:11,685 - INFO - Lowest price remains unchanged for TP_Link Bluetooth: 232.99
+2025-05-26 09:02:11,685 - INFO - Price has not changed. Still 232.99
+2025-05-26 09:02:11,685 - INFO - Fetching price for: https://www.amazon.com.tr/dp/B00M3SPIQI?ref=cm_sw_r_cso_wa_apin_dp_YTSQA34SYXZPH10C1AMG&ref_=cm_sw_r_cso_wa_apin_dp_YTSQA34SYXZPH10C1AMG&social_share=cm_sw_r_cso_wa_apin_dp_YTSQA34SYXZPH10C1AMG&previewDoh=1
+2025-05-26 09:02:11,686 - DEBUG - Starting new HTTPS connection (1): www.amazon.com.tr:443
+2025-05-26 09:02:12,372 - DEBUG - https://www.amazon.com.tr:443 "GET /dp/B00M3SPIQI?ref=cm_sw_r_cso_wa_apin_dp_YTSQA34SYXZPH10C1AMG&ref_=cm_sw_r_cso_wa_apin_dp_YTSQA34SYXZPH10C1AMG&social_share=cm_sw_r_cso_wa_apin_dp_YTSQA34SYXZPH10C1AMG&previewDoh=1 HTTP/1.1" 200 None
