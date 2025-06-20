@@ -12,8 +12,20 @@ import os
 import random
 import sqlite3
 from logging.handlers import TimedRotatingFileHandler
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium_stealth import stealth
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
+import json # JSON işlemek için
+import re
 
 #PARAMS
+DEBUG_SAVE_HTML = False
 SLEEP_TIME=random.uniform(10, 15) #between attemps to fetch the price
 RUN_EVERY=random.uniform(500 , 600) #seconds = 0.5 minutes
 # PRODUCTS_FILE kaldırıldı, artık kullanılmıyor
@@ -107,6 +119,111 @@ def get_all_products():
     products = cursor.fetchall()
     conn.close()
     return products
+
+
+def get_hepsiburada_price_with_selenium(url: str) -> str:
+    """
+    Hepsiburada için nihai ve kanıta dayalı en sağlam yöntem:
+    1. 'buyboxOrder: 1' ile kazanan satıcıyı bulur.
+    2. Fiyatı ve indirimi doğrudan bu satıcının objesinden okur.
+    """
+    driver = None
+    try:
+        logging.info(f"SELENIUM-STEALTH: Hepsiburada URL'si için fiyat alınıyor: {url}")
+
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--window-size=1920,1080")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--log-level=3")
+        chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+
+        service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=chrome_options)
+
+        stealth(driver,
+                languages=["tr-TR", "tr"],
+                vendor="Google Inc.",
+                platform="Win32",
+                webgl_vendor="Intel Inc.",
+                renderer="Intel Iris OpenGL Engine",
+                fix_hairline=True,
+                )
+
+        driver.get(url)
+
+        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, 'reduxStore')))
+        logging.info("SELENIUM: 'reduxStore' script etiketi yüklendi.")
+
+        final_price_str = "-1"
+
+        # Verinin tam yüklenmesi için bekleme döngüsü
+        for i in range(10):
+            soup = BeautifulSoup(driver.page_source, "html.parser")
+            redux_script = soup.find("script", {"id": "reduxStore"})
+            if not redux_script:
+                time.sleep(0.5)
+                continue
+
+            data = json.loads(redux_script.string)
+            product_state = data.get("productState", {})
+            if not product_state:
+                logging.info(f"SELENIUM: {i + 1}. deneme - 'productState' henüz yüklenmedi.")
+                time.sleep(0.5)
+                continue
+
+            # Ana fiyatı ve kampanya detayını al
+            product_info = product_state.get("product", {})
+            base_price = product_info.get("prices", [{}])[0].get("value")
+
+            campaign_detail = product_state.get("campaignDetail", {})
+            winner_campaign_name = campaign_detail.get("winnerCampaignName")
+
+            if base_price is not None:
+                logging.info(f"SELENIUM: {i + 1}. denemede baz fiyat bulundu: {base_price}")
+                final_price = float(base_price)
+
+                # Kampanya metni varsa indirimi uygula ve döngüden çık
+                if winner_campaign_name:
+                    logging.info(f"SELENIUM: 'winnerCampaignName' bulundu: '{winner_campaign_name}'")
+                    match = re.search(r'%\s*(\d+\.?\d*)', winner_campaign_name)  # Ondalıklı indirimleri de yakalar
+                    if match:
+                        try:
+                            discount_value = float(match.group(1))
+                            if discount_value > 0:
+                                final_price = float(base_price) * (1 - (discount_value / 100.0))
+                                logging.info(
+                                    f"SELENIUM: 'winnerCampaignName' üzerinden %{discount_value} indirim uygulandı.")
+                        except (ValueError, TypeError):
+                            logging.warning(
+                                f"SELENIUM: 'winnerCampaignName' içinde geçersiz indirim değeri: {match.group(1)}")
+                    else:
+                        logging.info("SELENIUM: 'winnerCampaignName' içinde yüzde formatında indirim bulunamadı.")
+
+                else:
+                    logging.info(
+                        "SELENIUM: 'campaignDetail' veya 'winnerCampaignName' alanı henüz boş, indirim aranamıyor.")
+
+                # Fiyatı bulduğumuz için artık döngüden çıkabiliriz, kampanya olmasa bile.
+                final_price_str = f"{final_price:.2f}"
+                break
+
+            logging.info(f"SELENIUM: {i + 1}. denemede baz fiyat henüz bulunamadı, bekleniyor...")
+            time.sleep(0.5)
+
+        if final_price_str == "-1":
+            logging.error("SELENIUM: Bekleme süresi sonunda baz fiyat dahi bulunamadı.")
+
+        logging.info(f"SELENIUM: Nihai hesaplanan fiyat: {final_price_str}")
+        return final_price_str
+
+    except Exception as e:
+        logging.error(f"SELENIUM: Beklenmedik bir hata oluştu: {e}", exc_info=True)
+        return "-1"
+    finally:
+        if driver:
+            driver.quit()
+
 
 def update_product(id: int, name: str, price: float, url: str, lowest_price_to_set: float,
                    etag: str = None, last_modified_date: str = None):
@@ -202,19 +319,21 @@ def get_price_name(product_id: int,name: str, url: str, previous_etag: str = Non
         session = requests.Session()
         response = requests.get(url, headers=request_headers, timeout=15)
         #response = session.get(url, headers=request_headers, timeout=15)
-        # 'debug_html' adında bir klasör yoksa oluştur.
-        # debug_folder = 'debug_html'
-        # os.makedirs(debug_folder, exist_ok=True)
-        # logging.debug(f"Response headers for {url} (Status: {response.status_code}): {response.headers}")
-        # # Dosya adını zaman damgası ve ürün ID'si ile oluştur.
-        # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        # # Ürün adından geçersiz karakterleri temizle (opsiyonel ama önerilir)
-        # safe_name = "".join([c for c in name if c.isalpha() or c.isdigit() or c.isspace()]).rstrip()
-        # filename = os.path.join(debug_folder, f"{timestamp}_ID_{product_id}_{safe_name}.html")
-        #
-        # # Gelen HTML içeriğini dosyaya yaz.
-        # with open(filename, 'w', encoding='utf-8') as f:
-        #     f.write(response.text)
+        if DEBUG_SAVE_HTML:
+            # 'debug_html' adında bir klasör yoksa oluştur.
+            debug_folder = 'debug_html'
+            os.makedirs(debug_folder, exist_ok=True)
+
+            # Dosya adını zaman damgası ve ürün ID'si ile oluştur.
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            safe_name = "".join([c for c in name if c.isalpha() or c.isdigit() or c.isspace()]).rstrip()
+            filename = os.path.join(debug_folder, f"{timestamp}_ID_{product_id}_{safe_name}.html")
+
+            # Gelen HTML içeriğini dosyaya yaz.
+            with open(filename, 'w', encoding='utf-8') as f:
+                f.write(response.text)
+
+            logging.info(f"HTML content for product ID {product_id} saved to {filename}")
 
         # logging.info(f"HTML content for product ID {product_id} saved to {filename}")
         if response.status_code == 304:
@@ -323,6 +442,44 @@ def get_price_name(product_id: int,name: str, url: str, previous_etag: str = Non
             else:
                 logging.warning(f"JSON-LD script tag not found for SuarezClothing: {url}")
 
+        elif "hepsiburada.com" in url:
+            logging.info("Hepsiburada URL detected. Applying Hepsiburada-specific logic.")
+
+            # 1. Adım: Güvenilir test kimliğini kullanarak ana fiyat konteynerını bul.
+            # "attrs" kullanarak standart olmayan öznitelikleri arayabiliriz.
+            price_container = soup.find('div', attrs={'data-test-id': 'checkout-price'})
+
+            if price_container:
+                # 2. Adım: Konteynerin içindeki tüm metni al.
+                # Örnek: "Sepete özel fiyat 615,58 TL"
+                # Bu metnin içinden sadece fiyatı içeren bölümü bulmaya çalışacağız.
+                # Genellikle fiyat, konteyner içindeki son metin parçası olur.
+
+                # Fiyatın bulunduğu div'i bulmak için daha spesifik bir arama yapalım.
+                # Sizin örneğinizde fiyat "bWwoI8vknB6COlRVbpRj" class'ına sahip div'de.
+                # Bu class güvenilmez olduğu için, metnin kendisinden yola çıkacağız.
+                price_div = price_container.find('div', string=lambda text: 'TL' in text if text else False)
+
+                if price_div:
+                    raw_price = price_div.get_text(strip=True) # Örnek: "615,58 TL"
+                    logging.info(f"Found raw price string in Hepsiburada container: '{raw_price}'")
+
+                    # 3. Adım: Fiyatı temizle (mevcut kodunuzdaki temizleme mantığını kullanıyoruz)
+                    cleaned_price = raw_price.replace('₺', '').replace('TL', '').replace(' ', '').replace('.', '').replace(',', '.').strip()
+                    try:
+                        float(cleaned_price)
+                        price_str = cleaned_price
+                        logging.info(f"Successfully cleaned Hepsiburada price: {price_str}")
+                    except ValueError:
+                        logging.warning(f"Could not convert Hepsiburada price '{cleaned_price}' to float.")
+                        price_str = "-1"
+                else:
+                    logging.warning("Price text (div containing 'TL') not found inside the Hepsiburada container.")
+                    price_str = "-1"
+            else:
+                logging.warning("Hepsiburada price container with data-test-id 'checkout-price' not found.")
+                price_str = "-1"
+
         elif "bikehouse.co" in url:
             # Bu kısım değişmedi
             price_element = soup.find('span', class_='price_varies')  # Eğer indirim varsa
@@ -412,6 +569,15 @@ async def check_price_change(product_id: int, name: str, previous_price_db: floa
             # Fiyat ve en düşük fiyat da değişmemiştir. Sadece logla ve çık.
             return True # Başarılı işlem (değişiklik olmasa da)
 
+        if current_price_str == "-1" and "hepsiburada.com" in url:
+            logging.warning("Requests failed for Hepsiburada. Trying fallback with Selenium...")
+            # Not: Selenium senkronize çalıştığı için, asyncio döngüsünü bloklamamak adına
+            # onu ayrı bir thread'de çalıştırmak en iyi yöntemdir.
+            loop = asyncio.get_running_loop()
+            price_from_selenium = await loop.run_in_executor(
+                None, get_hepsiburada_price_with_selenium, url
+            )
+            current_price_str = str(price_from_selenium)
         # Eğer name_new boşsa, db'deki eski ismi kullanmaya devam et
         if not name_new:
             name_new = name

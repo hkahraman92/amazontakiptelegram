@@ -265,15 +265,19 @@ async def add_item(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Amazon ve Trendyol domainlerini ekliyoruz
     supported_domains = [
         "https://www.amazon.com/", "https://amzn.eu/", "https://www.amazon.com.tr/", "https://amzn.to/",
-        "https://www.trendyol.com/"
+        "https://www.trendyol.com/",
+        "https://www.hepsiburada.com/"
     ]
 
     # Gönderilen URL'nin desteklenen domainlerden biriyle başlayıp başlamadığını kontrol edin
     if not any(url.startswith(domain) for domain in supported_domains):
-        await update.message.reply_text("❗ Lütfen geçerli bir **Amazon** veya **Trendyol** ürün linki gönderin.", reply_markup=main_menu_keyboard())
+        # --- DEĞİŞİKLİK 2: Hata mesajı güncellendi ---
+        await update.message.reply_text(
+            "❗ Lütfen geçerli bir **Amazon, Trendyol veya Hepsiburada** ürün linki gönderin.",
+            reply_markup=main_menu_keyboard()
+        )
         logging.warning(f"Unsupported URL provided by user {update.message.from_user.id}: {url}")
         return
-
     # URL geçerli ise, ürünü ekleyelim
     new_item_id = await insert_product_to_db(item_name, url, price=0)
 
