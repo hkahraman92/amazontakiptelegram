@@ -6,8 +6,8 @@ from bs4 import BeautifulSoup
 import time
 
 # --- Ayarlar ---
-url = "https://www.trendyol.com/sr?mid=968&lpd=30&os=1&sst=PRICE_BY_DESC"
-#url = "https://www.trendyol.com/sr?wb=33,160,303,249,104725,108184,257,101470,102909,111040,794,103138,108203&lpd=30&mid=968&os=1"
+#url = "https://www.trendyol.com/sr?mid=968&lpd=30&os=1&sst=PRICE_BY_DESC"
+#url = "https://www.trendyol.com/sr?q=sabunluk%20deterjanl%C4%B1k&qt=Sabunluk%20Deterjanl%C4%B1k&st=Sabunluk%20Deterjanl%C4%B1k&lpd=30&os=1"
 DISCOUNT_THRESHOLD = 30  # İndirim eşiği
 SCROLL_PAUSE_TIME = 3  # Her kaydırma sonrası yeni ürünlerin yüklenmesi için bekleme süresi
 HEADLESS_MODE = False  # Tarayıcının görünmesini istemiyorsanız True yapın

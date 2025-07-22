@@ -2,6 +2,7 @@ import configparser
 import os
 import logging
 from urllib.parse import urlparse
+from telegram.error import BadRequest
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram import __version__ as TG_VER
 from telegram.ext import (
@@ -142,69 +143,151 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Yardım mesajı gönderir."""
+    # YENİ KOMUTUN GÜNCELLENMİŞ AÇIKLAMASI
     help_message = """
     🌟 **Bot Komutları:**
 
     /start - Botu başlatır ve ana menüyü gösterir.
     /help - Bot hakkında yardım alırsınız.
     /read_items - Kayıtlı tüm ürünleri görüntüler.
-    /add_item NAME,URL - Yeni bir ürün ekler.
-    /remove_item ID - ID'ye sahip ürünü siler.
+    /add_item [Ad],[Link] - Yeni bir ürün ekler.
+    /remove_item [ID] - ID'ye sahip ürünü siler.
+    /setinterval [Min Ürün] [Max Ürün] [Min Döngü] [Max Döngü] - Zamanlamayı ayarlar.
 
-    🎯 **Öneriler:**
-    - Ürün eklemek için "/add_item [Ürün Adı], [Ürün Linki]" komutunu kullanın.
-    - Ürünleri görmek için "/read_items" komutunu kullanın.
-    - Ürün silmek için "/remove_item [Ürün ID]" komutunu kullanın.
+    🎯 **Zamanlama Ayarı Örneği:**
+    `/setinterval 3 5 300 400`
+    Bu komut:
+    - Ürünler arası beklemeyi 3-5 saniye yapar.
+    - Tüm ürünler bittikten sonraki ana beklemeyi (döngü) 300-400 saniye (5-6.6 dakika) yapar.
     """
-    await update.message.reply_text(help_message, reply_markup=help_menu_keyboard())
+    await update.message.reply_text(help_message, reply_markup=main_menu_keyboard())
     logging.info(f"Help command requested by user {update.message.from_user.id}")
+
 
 async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Kullanıcı menüye tıkladığında yapılan işlemler."""
     query = update.callback_query
-    await query.answer() # İşlemin alındığını belirtmek için
+    await query.answer()  # İşlemin alındığını belirtmek için
 
-    if query.data == "read_items":
-        await query.edit_message_text("Ürünler yükleniyor...") # Yükleniyor mesajını güncelle
-        items_chunks = await read_products() # Artık bir liste dönüyor
+    try:
+        if query.data == "read_items":
+            await query.edit_message_text("Ürünler yükleniyor...")
+            items_chunks = await read_products()
 
-        # İlk mesajı edit_message_text ile gönder
-        if items_chunks:
-            await query.edit_message_text(items_chunks[0], reply_markup=main_menu_keyboard())
-            # Kalan mesajları reply_text ile gönder
-            for i in range(1, len(items_chunks)):
-                await query.message.reply_text(items_chunks[i])
+            if items_chunks:
+                await query.edit_message_text(items_chunks[0], reply_markup=main_menu_keyboard())
+                for i in range(1, len(items_chunks)):
+                    await query.message.reply_text(items_chunks[i])
+            else:
+                await query.edit_message_text("📭 Hiç ürün bulunamadı.", reply_markup=main_menu_keyboard())
+
+        elif query.data == "add_item":
+            await query.edit_message_text(
+                "Yeni ürün eklemek için /add_item [Ad], [Link] komutunu kullanın.",
+                reply_markup=main_menu_keyboard()
+            )
+
+        elif query.data == "remove_item":
+            await query.edit_message_text(
+                "Ürün silmek için /remove_item [ID] komutunu kullanın.",
+                reply_markup=main_menu_keyboard()
+            )
+
+        elif query.data == "help":
+            await query.edit_message_text("Yardım menüsü", reply_markup=help_menu_keyboard())
+
+        elif query.data == "back_to_main_menu":
+            await query.edit_message_text("Ana menüye dönülüyor...", reply_markup=main_menu_keyboard())
+
+        elif query.data == "commands":
+            command_message = """
+                🛠️ **Bot Komutları:**
+
+                /start - Botu başlatır ve ana menüyü gösterir.
+                /help - Bot hakkında yardım alırsınız.
+                /read_items - Kayıtlı tüm ürünleri görüntüler.
+                /add_item NAME,URL - Yeni bir ürün ekler.
+                /remove_item ID - ID'ye sahip ürünü siler.
+
+                🎯 **Öneriler:**
+                - Ürün eklemek için "/add_item [Ürün Adı], [Ürün Linki]" komutunu kullanın.
+                - Ürünleri görmek için "/read_items" komutunu kullanın.
+                - Ürün silmek için "/remove_item [Ürün ID]" komutunu kullanın.
+                """
+            await query.edit_message_text(command_message, reply_markup=help_menu_keyboard())
+
+    except BadRequest as e:
+        if "Message is not modified" in str(e):
+            # Mesaj değişmediyse bu hatayı görmezden gel, program çökmesin.
+            logging.info("Ignoring 'Message is not modified' error.")
+            pass
         else:
-            await query.edit_message_text("📭 Hiç ürün bulunamadı.", reply_markup=main_menu_keyboard())
+            # Eğer başka bir BadRequest hatası ise logla.
+            logging.error(f"An unexpected BadRequest occurred: {e}")
 
+async def set_interval(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Scraper'ın zamanlama ayarlarını günceller."""
+    user_id = update.message.from_user.id
+    logging.info(f"Set interval command received from user {user_id}: {' '.join(context.args)}")
 
-    elif query.data == "add_item":
-        await query.edit_message_text("Yeni ürün eklemek için /add_item [Ad], [Link] komutunu kullanın.", reply_markup=main_menu_keyboard())
+    # Kullanım talimatını 4 parametreye göre güncelle
+    usage_text = (
+        "❗ Hatalı kullanım.\n"
+        "Lütfen **dört sayı** girin:\n\n"
+        "1. Min ürün arası bekleme (sn)\n"
+        "2. Max ürün arası bekleme (sn)\n"
+        "3. Min ana döngü bekleme (sn)\n"
+        "4. Max ana döngü bekleme (sn)\n\n"
+        "Örnek: `/setinterval 3 5 300 400`"
+    )
 
-    elif query.data == "remove_item":
-        await query.edit_message_text("Ürün silmek için /remove_item [ID] komutunu kullanın.", reply_markup=main_menu_keyboard())
+    if len(context.args) != 4:
+        await update.message.reply_text(usage_text)
+        return
 
-    elif query.data == "help":
-        await query.edit_message_text("Yardım menüsü", reply_markup=help_menu_keyboard())
+    try:
+        # Dört parametreyi de al
+        min_s, max_s, min_r, max_r = map(float, context.args)
 
-    elif query.data == "back_to_main_menu":
-        await query.edit_message_text("Ana menüye dönülüyor...", reply_markup=main_menu_keyboard())
-    elif query.data == "commands":
-        command_message = """
-            🛠️ **Bot Komutları:**
+        # Tüm süreleri kontrol et
+        if min_s <= 0 or max_s <= 0 or min_r <= 0 or max_r <= 0:
+            await update.message.reply_text("❗ Süreler sıfırdan büyük olmalıdır.")
+            return
 
-            /start - Botu başlatır ve ana menüyü gösterir.
-            /help - Bot hakkında yardım alırsınız.
-            /read_items - Kayıtlı tüm ürünleri görüntüler.
-            /add_item NAME,URL - Yeni bir ürün ekler.
-            /remove_item ID - ID'ye sahip ürünü siler.
+        if min_s > max_s or min_r > max_r:
+            await update.message.reply_text("❗ Minimum süreler, ilgili maksimum sürelerden büyük olamaz.")
+            return
 
-            🎯 **Öneriler:**
-            - Ürün eklemek için "/add_item [Ürün Adı], [Ürün Linki]" komutunu kullanın.
-            - Ürünleri görmek için "/read_items" komutunu kullanın.
-            - Ürün silmek için "/remove_item [Ürün ID]" komutunu kullanın.
-            """
-        await query.edit_message_text(command_message, reply_markup=help_menu_keyboard())
+        # Config dosyasını oku ve güncelle
+        config = configparser.ConfigParser()
+        config.read(CONFIG_FILE)
+
+        if not config.has_section('TIMING'):
+            config.add_section('TIMING')
+
+        # Dört değeri de ayarla
+        config.set('TIMING', 'MIN_SLEEP', str(min_s))
+        config.set('TIMING', 'MAX_SLEEP', str(max_s))
+        config.set('TIMING', 'MIN_RUN_EVERY', str(min_r))
+        config.set('TIMING', 'MAX_RUN_EVERY', str(max_r))
+
+        with open(CONFIG_FILE, 'w') as configfile:
+            config.write(configfile)
+
+        # Onay mesajını güncelle
+        await update.message.reply_text(
+            f"✅ Zamanlama başarıyla güncellendi!\n\n"
+            f"🛍️ Her ürün arası bekleme: **{min_s:.1f} - {max_s:.1f} saniye**\n"
+            f"🔄 Döngüler arası bekleme: **{min_r:.1f} - {max_r:.1f} saniye**\n\n"
+            f"Bu ayarlar, scraper'ın bir sonraki döngüsünde aktif olacaktır."
+        )
+        logging.info(f"Interval updated by user {user_id}. SLEEP: {min_s}-{max_s}s, RUN_EVERY: {min_r}-{max_r}s.")
+
+    except ValueError:
+        await update.message.reply_text("❗ Lütfen geçerli sayılar girin.\n" + usage_text)
+    except Exception as e:
+        logging.error(f"Error updating config file: {e}")
+        await update.message.reply_text("❌ Ayarlar güncellenirken bir hata oluştu.")
 
 
 def help_menu_keyboard():
@@ -266,14 +349,15 @@ async def add_item(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     supported_domains = [
         "https://www.amazon.com/", "https://amzn.eu/", "https://www.amazon.com.tr/", "https://amzn.to/",
         "https://www.trendyol.com/",
-        "https://www.hepsiburada.com/"
+        "https://www.hepsiburada.com/",
+        "https://www.mediamarkt.com.tr/"
     ]
 
     # Gönderilen URL'nin desteklenen domainlerden biriyle başlayıp başlamadığını kontrol edin
     if not any(url.startswith(domain) for domain in supported_domains):
         # --- DEĞİŞİKLİK 2: Hata mesajı güncellendi ---
         await update.message.reply_text(
-            "❗ Lütfen geçerli bir **Amazon, Trendyol veya Hepsiburada** ürün linki gönderin.",
+            "❗ Lütfen geçerli bir **Amazon, Trendyol , Hepsiburada veya MediaMarkt** ürün linki gönderin.",
             reply_markup=main_menu_keyboard()
         )
         logging.warning(f"Unsupported URL provided by user {update.message.from_user.id}: {url}")
@@ -319,6 +403,7 @@ def main():
     application.add_handler(CommandHandler("add_item", add_item))
     application.add_handler(CommandHandler("remove_item", remove_item))
     application.add_handler(CommandHandler("read_items", read_items))
+    application.add_handler(CommandHandler("setinterval", set_interval))
     application.add_handler(CallbackQueryHandler(button))
 
     application.run_polling()

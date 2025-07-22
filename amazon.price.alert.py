@@ -26,8 +26,8 @@ import re
 
 #PARAMS
 DEBUG_SAVE_HTML = False
-SLEEP_TIME=random.uniform(10, 15) #between attemps to fetch the price
-RUN_EVERY=random.uniform(500 , 600) #seconds = 0.5 minutes
+#SLEEP_TIME=random.uniform(10, 15) #between attemps to fetch the price
+#RUN_EVERY=random.uniform(500 , 600) #seconds = 0.5 minutes
 # PRODUCTS_FILE kaldırıldı, artık kullanılmıyor
 CONFIG_FILE = 'C:\\Users\\Harun\\PycharmProjects\\amazonpricealertTelegramBot\\config.ini'
 PRICE_DIFFERENCE=1 #1 dollar, min price difference to notify
@@ -43,7 +43,7 @@ formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 handler.setFormatter(formatter)
 
 logger = logging.getLogger()
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.ERROR)
 logger.addHandler(handler)
 
 
@@ -272,7 +272,10 @@ def get_name(soup, url):
             title_element = soup.find("h1", attrs={"class": "pr-new-br"})
         elif "bikehouse.co" in url:
             title_element = soup.find("h1", attrs={"class":'product_title entry-title'})
-
+        elif "mediamarkt.com.tr" in url:
+            title_element = soup.find("h1", attrs={"class": 'h_product-title'})
+            if not title_element:  # Fallback
+                title_element = soup.find("h1")
         if title_element:
             title_text = title_element.text.strip().replace(",", " ")
     except Exception as e:
@@ -420,16 +423,26 @@ def get_price_name(product_id: int,name: str, url: str, previous_etag: str = Non
 
         elif "trendyol.com" in url:  # <-- TÜM TRENDYOL MANTIĞI BU BLOKTA
             logging.info("Trendyol URL detected. Applying Trendyol-specific logic.")
+
+            price_text = ""
+            # Öncelik 1: İndirimli fiyatı ara
             price_span = soup.find("span", class_="prc-dsc")
             if price_span:
-                price_str = price_span.text.strip().replace('TL', '').replace(' ', '').replace('.', '').replace(',',
-                                                                                                                '.').strip()
-                logging.info(f"Found price for {scraped_name or 'Unknown'} on Trendyol: {price_str}")
+                price_text = price_span.text
+                logging.info(f"İndirimli fiyat (prc-dsc) bulundu: '{price_text}'")
             else:
-                logging.warning(f"Price span 'prc-dsc' not found for Trendyol URL: {url}")
+                # Öncelik 2: İndirimli fiyat yoksa, sizin belirttiğiniz etiketi ara
+                price_span = soup.find("span", class_="price-view-original")
+                if price_span:
+                    price_text = price_span.text
+                    logging.info(f"Normal fiyat (price-view-original) bulundu: '{price_text}'")
+                else:
+                    logging.warning(f"Price span 'prc-dsc' veya 'price-view-original' bulunamadı: {url}")
 
+            if price_text:
+                price_str = price_text.strip().replace('TL', '').replace(' ', '').replace('.', '').replace(',','.').strip()
         elif "suarezclothing.com" in url:
-            # Bu kısım değişmedi
+
             script_tag = soup.find('script', type='application/ld+json')
             if script_tag:
                 json_data = json.loads(script_tag.string)
@@ -479,6 +492,33 @@ def get_price_name(product_id: int,name: str, url: str, previous_etag: str = Non
             else:
                 logging.warning("Hepsiburada price container with data-test-id 'checkout-price' not found.")
                 price_str = "-1"
+
+        elif "mediamarkt.com.tr" in url:
+            logging.info("MediaMarkt URL detected. Using direct HTML element scraping.")
+
+
+            # Sayfada "AVAILABLE" içeren bir data-test elementi olup olmadığını arar.
+            # find() fonksiyonu ile bu desene uyan ilk elementi bulmak yeterlidir.
+            # in_stock_element = soup.find(
+            #     lambda tag: tag.has_attr('data-test') and 'AVAILABLE' in tag['data-test']
+            # )
+            #
+            # # Eğer "AVAILABLE" içeren hiçbir element bulunamazsa, ürün stok dışı kabul edilir.
+            # if not in_stock_element:
+            #     logging.info(
+            #         f"Product {scraped_name or 'Unknown'} is currently unavailable on MediaMarkt (no AVAILABLE flags found).")
+            #     return "-2", scraped_name, new_etag, new_last_modified
+
+            # 2. Fiyatı doğrudan HTML elementinden al
+            price_element = soup.find('span', attrs={'data-test': 'branded-price-whole-value'})
+
+            if price_element:
+                raw_price = price_element.get_text(strip=True)
+                price_str = raw_price
+                logging.info(f"Price found using data-test attribute: '{price_str}'")
+            else:
+                logging.warning(
+                    f"Could not find price element with 'data-test=branded-price-whole-value' for MediaMarkt: {url}")
 
         elif "bikehouse.co" in url:
             # Bu kısım değişmedi
@@ -557,104 +597,118 @@ async def send_telegram_notification(item, previous_price, current_price, lowest
         traceback.print_exc()
 
 # --- ANA KONTROL FONKSİYONU ---
-async def check_price_change(product_id: int, name: str, previous_price_db: float, url: str, db_etag: str, db_last_modified: str):
-    """Ürünün fiyat değişimini kontrol eder, veritabanını günceller ve ETag/Last-Modified yönetir."""
+async def check_price_change(product_id: int, name: str, previous_price_db: float, url: str, db_etag: str,
+                             db_last_modified: str):
+    """
+    Ürünün fiyat değişimini kontrol eder, veritabanını günceller ve ETag/Last-Modified yönetir.
+    En düşük fiyatın "unutulması" hatası bu versiyonda düzeltilmiştir.
+    """
+
+    # DÜZELTME 1: En düşük fiyatı en başta, bir kere veritabanından oku.
+    # Bu sayede fonksiyonun geri kalanında (hata durumları dahil) bu değeri güvenle kullanabiliriz.
+    conn = sqlite3.connect('products.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT lowest_price FROM products WHERE id = ?', (product_id,))
+    row = cursor.fetchone()
+    conn.close()
+    # Eğer daha önce hiç kaydedilmemişse veya 0'dan küçük/eşit ise, 0.0 olarak başlat.
+    # Bu, ilk fiyatın en düşük fiyat olarak atanmasını sağlar.
+    stored_lowest_price_db = row[0] if row and row[0] and row[0] > 0 else 0.0
+
     try:
-        current_price_str, name_new, new_etag, new_last_modified = get_price_name(product_id, name, url, db_etag, db_last_modified)
+        # Ürün fiyatını ve diğer başlık bilgilerini al
+        current_price_str, name_new, new_etag, new_last_modified = get_price_name(product_id, name, url, db_etag,
+                                                                                  db_last_modified)
 
-        # Durum 1: İçerik değişmemiş (HTTP 304 yanıtı)
+        # Durum 1: İçerik değişmemiş (HTTP 304)
         if current_price_str == "-3":
-            logging.info(f"Content not modified for {name_new or name} (ID: {product_id}). Using cached data. ETag: {db_etag}, Last-Modified: {db_last_modified}")
-            # Bu durumda DB'deki etag ve last_modified zaten doğru ve günceldir.
-            # Fiyat ve en düşük fiyat da değişmemiştir. Sadece logla ve çık.
-            return True # Başarılı işlem (değişiklik olmasa da)
+            logging.info(f"Content not modified for {name_new or name} (ID: {product_id}). Using cached data.")
+            return True  # İşlem başarılı, döngü devam etsin.
 
+        # Hepsiburada için Selenium ile yedek kontrol
         if current_price_str == "-1" and "hepsiburada.com" in url:
             logging.warning("Requests failed for Hepsiburada. Trying fallback with Selenium...")
-            # Not: Selenium senkronize çalıştığı için, asyncio döngüsünü bloklamamak adına
-            # onu ayrı bir thread'de çalıştırmak en iyi yöntemdir.
             loop = asyncio.get_running_loop()
             price_from_selenium = await loop.run_in_executor(
                 None, get_hepsiburada_price_with_selenium, url
             )
             current_price_str = str(price_from_selenium)
-        # Eğer name_new boşsa, db'deki eski ismi kullanmaya devam et
+
+        # Eğer ürün adı kazınarak bulunamadıysa veritabanındaki adı kullan
         if not name_new:
             name_new = name
 
-        # Durum 2: Fiyat alınamadı (-1) veya stokta yok (-2) veya geçersiz format
-        if current_price_str.strip() == "" or current_price_str.isspace() or current_price_str == "-1":
-            logging.warning(f"Invalid or empty price string ('{current_price_str}') for {name_new} (ID: {product_id}). Skipping price update logic.")
-            # Fiyat bulunamadıysa bile etag ve last_modified güncellenebilir, çünkü sayfa içeriği değişmiş olabilir.
-            update_product(product_id, name_new, previous_price_db, url, previous_price_db, new_etag, new_last_modified) # Fiyatı değiştirme, başlıkları güncelle
-            return False # Fiyat alınamadığı için başarısız sayılabilir
+        # Durum 2: Fiyat alınamadı veya geçersiz format
+        if current_price_str.strip() in ["", "-1"] or current_price_str.isspace():
+            logging.warning(
+                f"Invalid or empty price string ('{current_price_str}') for {name_new} (ID: {product_id}). Skipping price update logic.")
+            # DÜZELTME 2: Fiyat alınamadığında bile, OKUNAN en düşük fiyatı koru.
+            # `previous_price_db` yerine `stored_lowest_price_db` kullanıyoruz. Bu, en düşük fiyatın bozulmasını engeller.
+            update_product(product_id, name_new, previous_price_db, url, stored_lowest_price_db, new_etag,
+                           new_last_modified)
+            return False  # Fiyat alınamadığı için başarısız
 
         try:
             current_price = float(current_price_str)
         except ValueError:
             logging.error(f"Invalid current price format '{current_price_str}' for {name_new} (ID: {product_id}).")
-            update_product(product_id, name_new, previous_price_db, url, previous_price_db, new_etag, new_last_modified) # Başlıkları güncelle
+            # DÜZELTME 3: Format hatasında da OKUNAN en düşük fiyatı koru.
+            update_product(product_id, name_new, previous_price_db, url, stored_lowest_price_db, new_etag,
+                           new_last_modified)
             return False
 
-        # En düşük fiyatı belirle
-        conn = sqlite3.connect('products.db')
-        cursor = conn.cursor()
-        cursor.execute('SELECT lowest_price FROM products WHERE id = ?', (product_id,))
-        row = cursor.fetchone()
-        conn.close()
-        stored_lowest_price_db = row[0] if row and row[0] is not None else 0.0
-
+        # DÜZELTME 4: En düşük fiyatı doğru şekilde hesapla
         calculated_new_lowest_price = stored_lowest_price_db
-        if current_price > 0: # Sadece geçerli (pozitif) fiyatlar için lowest_price'ı güncelle
+
+        # Sadece geçerli (pozitif) güncel fiyatlar en düşük fiyatı etkileyebilir.
+        if current_price > 0:
+            # Eğer daha önce hiç en düşük fiyat kaydedilmediyse (0 ise) VEYA yeni fiyat daha düşükse
             if stored_lowest_price_db <= 0.0 or current_price < stored_lowest_price_db:
                 calculated_new_lowest_price = current_price
                 logging.info(f"New lowest price for {name_new} (ID: {product_id}): {calculated_new_lowest_price}₺")
-            else:
-                logging.info(f"Lowest price remains unchanged for {name_new} (ID: {product_id}): {calculated_new_lowest_price}₺")
-        else:
-            logging.info(f"Current price ({current_price}₺) is not positive. Lowest price will not be updated for {name_new} (ID: {product_id}).")
+            # else durumunda, calculated_new_lowest_price zaten stored_lowest_price_db'ye eşit olduğundan bir şey yapmaya gerek yok.
 
+        # --- Bildirim Mantığı ---
+        # Bu kısımda `calculated_new_lowest_price` artık doğru olduğu için bildirimler de doğru olacaktır.
 
-        # --- Bildirim ve Güncelleme Mantığı ---
-        notification_sent = False
+        # Stokta vardı, şimdi stok dışı kaldı
+        if previous_price_db > 0 and current_price == -2.0:
+            logging.info(f"Product {name_new} (ID: {product_id}) is now unavailable.")
+            await send_telegram_notification(name_new, previous_price_db, current_price, calculated_new_lowest_price,
+                                             url)
 
-        if previous_price_db == -2.0 and current_price > 0: # Stokta yoktu, stoğa geldi
+        # Stokta yoktu, şimdi stoğa geldi
+        elif previous_price_db == -2.0 and current_price > 0:
             logging.info(f"Product {name_new} (ID: {product_id}) is back in stock! Price: {current_price}₺.")
             await send_telegram_notification(name_new, "STOKTA YOKTU", current_price, calculated_new_lowest_price, url)
-            notification_sent = True
-        elif current_price == -2: # Stok dışı kaldı
-            if previous_price_db > 0 : # Daha önce stokta ise bildir
-                 logging.info(f"Product {name_new} (ID: {product_id}) is now unavailable.")
-                 await send_telegram_notification(name_new, previous_price_db, current_price, calculated_new_lowest_price, url)
-                 notification_sent = True
-            # Eğer zaten -2.0 idi ve yine -2.0 ise bildirim göndermeye gerek yok.
-        elif current_price > 0 and previous_price_db > 0 and current_price != previous_price_db: # Normal fiyat değişimi
-            if abs(current_price - previous_price_db) >= PRICE_DIFFERENCE:
-                logging.info(f"Price changed for {name_new}: {previous_price_db}₺ -> {current_price}₺.")
-                await send_telegram_notification(name_new, previous_price_db, current_price, calculated_new_lowest_price, url)
-                notification_sent = True
-            else:
-                logging.info(f"Price changed for {name_new} but below threshold. {previous_price_db}₺ -> {current_price}₺.")
-        elif current_price > 0 and previous_price_db <= 0 and previous_price_db != -2.0: # İlk defa geçerli fiyat bulundu (ve stokta yoktu durumu değilse)
-            logging.info(f"Found initial valid price for {name_new}: {current_price}₺. No previous valid price recorded.")
-            # İsteğe bağlı: İlk geçerli fiyat bulunduğunda bildirim göndermek isterseniz burayı aktifleştirin.
+
+        # Stoktaydı ve fiyatı değişti (belirlenen eşiğin üzerinde)
+        elif current_price > 0 and previous_price_db > 0 and abs(current_price - previous_price_db) >= PRICE_DIFFERENCE:
+            logging.info(f"Price changed for {name_new}: {previous_price_db}₺ -> {current_price}₺.")
+            await send_telegram_notification(name_new, previous_price_db, current_price, calculated_new_lowest_price,
+                                             url)
+
+        # İlk defa geçerli bir fiyat bulundu (ve daha önce stokta yok durumu değildi)
+        elif current_price > 0 and previous_price_db <= 0 and previous_price_db != -2.0:
+            logging.info(
+                f"Found initial valid price for {name_new}: {current_price}₺. No previous valid price recorded.")
+            # İsteğe bağlı: İlk fiyatta bildirim göndermek için aşağıdaki satırı aktif edebilirsiniz.
             # await send_telegram_notification(name_new, "İlk Kez", current_price, calculated_new_lowest_price, url)
-            # notification_sent = True
         else:
             logging.info(f"Price for {name_new} is {current_price}₺. No significant change or special status detected.")
 
+        # Her durumda (fiyat değişse de değişmese de) DB'yi doğru `calculated_new_lowest_price` ile güncelle.
+        update_product(product_id, name_new, current_price, url, calculated_new_lowest_price, new_etag,
+                       new_last_modified)
 
-        # Her durumda (fiyat değişse de değişmese de, 304 hariç, -1 hariç) DB'yi güncelle.
-        # -1'i ve -2'yi de güncelleyebiliriz, çünkü bu durumlar da bir "durum" bilgisidir.
-        update_product(product_id, name_new, current_price, url, calculated_new_lowest_price, new_etag, new_last_modified)
-
-        return True # İşlem başarılı
+        return True  # İşlem başarılı
 
     except requests.exceptions.RequestException as exc:
-        logging.error(f"Network or request error for {name_new or name} (ID: {product_id}): {exc}")
+        logging.error(f"Network or request error for {name or 'N/A'} (ID: {product_id}): {exc}")
         return False
     except Exception as exc:
-        logging.exception(f"An unexpected error occurred in check_price_change for {name_new or name} (ID: {product_id}): {exc}")
+        logging.exception(
+            f"An unexpected error occurred in check_price_change for {name or 'N/A'} (ID: {product_id}): {exc}")
         return False
 
 # --- ANA ÇALIŞMA DÖNGÜSÜ ---
@@ -662,6 +716,30 @@ async def main():
     init_db()  # DB'yi başlat ve sütunları kontrol et/ekle
 
     while True:
+        try:
+            config.read(CONFIG_FILE)  # Dosyayı yeniden oku
+            # Her ürün arasındaki bekleme süresi (saniye)
+            min_sleep = config.getfloat('TIMING', 'MIN_SLEEP', fallback=10.0)
+            max_sleep = config.getfloat('TIMING', 'MAX_SLEEP', fallback=15.0)
+
+            # Tüm ürünler kontrol edildikten sonraki ana bekleme süresi (saniye)
+            min_run_every = config.getfloat('TIMING', 'MIN_RUN_EVERY', fallback=500.0)
+            max_run_every = config.getfloat('TIMING', 'MAX_RUN_EVERY', fallback=600.0)
+
+            # Değerlerin mantıklı olduğundan emin ol (min <= max)
+            if min_sleep > max_sleep: min_sleep = max_sleep
+            if min_run_every > max_run_every: min_run_every = max_run_every
+
+        except (configparser.NoSectionError, configparser.NoOptionError):
+            logging.warning(
+                "Config dosyasında [TIMING] bölümü bulunamadı. Varsayılan değerler kullanılıyor (10-15s / 500-600s).")
+            min_sleep, max_sleep = 10.0, 15.0
+            min_run_every, max_run_every = 500.0, 600.0
+
+            # Dinamik olarak hesaplanan bekleme süreleri
+        sleep_time_dynamic = random.uniform(min_sleep, max_sleep)
+        run_every_dynamic = random.uniform(min_run_every, max_run_every)
+
         products = get_all_products()  # id, name, price, lowest_price, url, etag, last_modified_date
 
         for product_data in products:
@@ -678,16 +756,16 @@ async def main():
                 if status:  # status True ise işlem başarılı (304 dahil veya fiyat güncellendi)
                     success_flag = True
                     break
-                logging.warning(f"Attempt {attempt + 1} failed for product ID {id_val}. Retrying after {SLEEP_TIME:.2f}s...")
-                await asyncio.sleep(SLEEP_TIME)
+                logging.warning(f"Attempt {attempt + 1} failed for product ID {id_val}. Retrying after {sleep_time_dynamic:.2f}s...")
+                await asyncio.sleep(sleep_time_dynamic)
 
             if not success_flag:
                 logging.error(f"All {retry_limit} retries failed for product ID {id_val} ({url_val}).")
 
             await asyncio.sleep(random.uniform(0.5, 1.5))  # Her ürün arasında kısa bir bekleme
 
-        logging.info(f"All products checked. Waiting for {RUN_EVERY:.2f} seconds before the next cycle.")
-        await asyncio.sleep(RUN_EVERY)
+        logging.info(f"All products checked. Waiting for {run_every_dynamic:.2f} seconds before the next cycle.")
+        await asyncio.sleep(run_every_dynamic)
 
 
 # Run the main function
