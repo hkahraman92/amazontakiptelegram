@@ -455,42 +455,73 @@ def get_price_name(product_id: int,name: str, url: str, previous_etag: str = Non
             else:
                 logging.warning(f"JSON-LD script tag not found for SuarezClothing: {url}")
 
+
         elif "hepsiburada.com" in url:
-            logging.info("Hepsiburada URL detected. Applying Hepsiburada-specific logic.")
 
-            # 1. Adım: Güvenilir test kimliğini kullanarak ana fiyat konteynerını bul.
-            # "attrs" kullanarak standart olmayan öznitelikleri arayabiliriz.
-            price_container = soup.find('div', attrs={'data-test-id': 'checkout-price'})
+            logging.info("Hepsiburada URL detected. Using direct JSON parsing from script tag.")
 
-            if price_container:
-                # 2. Adım: Konteynerin içindeki tüm metni al.
-                # Örnek: "Sepete özel fiyat 615,58 TL"
-                # Bu metnin içinden sadece fiyatı içeren bölümü bulmaya çalışacağız.
-                # Genellikle fiyat, konteyner içindeki son metin parçası olur.
+            try:
 
-                # Fiyatın bulunduğu div'i bulmak için daha spesifik bir arama yapalım.
-                # Sizin örneğinizde fiyat "bWwoI8vknB6COlRVbpRj" class'ına sahip div'de.
-                # Bu class güvenilmez olduğu için, metnin kendisinden yola çıkacağız.
-                price_div = price_container.find('div', string=lambda text: 'TL' in text if text else False)
+                # Selenium'da yaptığın gibi reduxStore script'ini bul
 
-                if price_div:
-                    raw_price = price_div.get_text(strip=True) # Örnek: "615,58 TL"
-                    logging.info(f"Found raw price string in Hepsiburada container: '{raw_price}'")
+                redux_script = soup.find("script", {"id": "reduxStore"})
 
-                    # 3. Adım: Fiyatı temizle (mevcut kodunuzdaki temizleme mantığını kullanıyoruz)
-                    cleaned_price = raw_price.replace('₺', '').replace('TL', '').replace(' ', '').replace('.', '').replace(',', '.').strip()
-                    try:
-                        float(cleaned_price)
-                        price_str = cleaned_price
-                        logging.info(f"Successfully cleaned Hepsiburada price: {price_str}")
-                    except ValueError:
-                        logging.warning(f"Could not convert Hepsiburada price '{cleaned_price}' to float.")
+                if redux_script:
+
+                    data = json.loads(redux_script.string)
+
+                    product_state = data.get("productState", {})
+
+                    # Ana fiyatı ve kampanya detayını al
+
+                    product_info = product_state.get("product", {})
+
+                    base_price = product_info.get("prices", [{}])[0].get("value")
+
+                    campaign_detail = product_state.get("campaignDetail", {})
+
+                    winner_campaign_name = campaign_detail.get("winnerCampaignName")
+
+                    if base_price is not None:
+
+                        final_price = float(base_price)
+
+                        # Kampanya metni varsa indirimi uygula
+
+                        if winner_campaign_name:
+
+                            match = re.search(r'%\s*(\d+\.?\d*)', winner_campaign_name)
+
+                            if match:
+
+                                discount_value = float(match.group(1))
+
+                                if discount_value > 0:
+                                    final_price = float(base_price) * (1 - (discount_value / 100.0))
+
+                                    logging.info(
+                                        f"Hepsiburada: 'winnerCampaignName' üzerinden %{discount_value} indirim uygulandı.")
+
+                        price_str = f"{final_price:.2f}"
+
+                        logging.info(f"Hepsiburada price found via JSON: {price_str}")
+
+                    else:
+
+                        logging.warning("Price 'value' not found in Hepsiburada JSON data.")
+
                         price_str = "-1"
+
                 else:
-                    logging.warning("Price text (div containing 'TL') not found inside the Hepsiburada container.")
+
+                    logging.warning("Hepsiburada: 'reduxStore' script tag not found.")
+
                     price_str = "-1"
-            else:
-                logging.warning("Hepsiburada price container with data-test-id 'checkout-price' not found.")
+
+            except Exception as e:
+
+                logging.error(f"Error parsing Hepsiburada JSON data: {e}")
+
                 price_str = "-1"
 
         elif "mediamarkt.com.tr" in url:
